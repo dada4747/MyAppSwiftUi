@@ -28,7 +28,7 @@ Each module contains its own:
 
 Example Folder:
 
-<img src="images/example.png" alt="Project Screenshot" width="300">
+<img src="images/folderStructure.jpg" alt="Project Screenshot" width="300">
 
 
 ---
@@ -88,7 +88,7 @@ struct MyApp: App {
 
 The environment is stored inside the Service Locator, so you can globally configure once and every module respects it.
 
-⸻
+---
 
 🧭 Simple Navigation
 
@@ -98,7 +98,7 @@ ServiceLocator.shared.makeLoginView()
 ```
 This reduces boilerplate and ensures every View has the right ViewModel, UseCase, and Repository injected automatically.
 
-⸻
+---
 
 🧪 Unit Testing
 
@@ -127,7 +127,7 @@ func testLoginUpdatesUser() {
 }
 ```
 
-⸻
+---
 
 📂 Project Structure
 ```
@@ -147,15 +147,15 @@ func testLoginUpdatesUser() {
  │   └── CoreTests
  ```
  
-⸻
+---
  
  📸 Diagrams & Screenshots
     •    System Design Diagram
 
-<img src="images/example.png" alt="Project Screenshot" width="300">
+<img src="images/systemdesign.jpg" alt="Project Screenshot" width="300">
 
 
-⸻
+---
 
 ✅ Key Takeaways
     •    Modular → Build reusable modules and drop them into other projects.
@@ -164,18 +164,21 @@ func testLoginUpdatesUser() {
     •    Navigation → Simplified with locator-based view builders.
     •    Testability → Works with Combine + XCTest.
 
-⸻
+---
 
 📝 Next Steps
     •    Add more modules (Home, Dashboard, Profile).
     •    Support per-module environments (e.g., User = Mock, Home = Live).
     •    Add UI tests and integration tests.
 
-⸻
+---
 
 ⚡️ Summary
 
 This repository is a reference architecture for building iOS apps with SwiftUI, MVVM, Clean Architecture, and a Service Locator pattern.
 
 It shows how to keep modules reusable, testable, and production-ready, while simplifying navigation and environment configuration.
-⸻
+
+---
+---
+
