@@ -9,6 +9,12 @@ import Combine
 import Foundation
 
 public final class LiveUserService: UserServiceProtocol {
+    public func forgotPassword(email: String) -> Bool {
+        print("Live forgot password hitting API for \(email)")
+        return true
+
+    }
+    
     private let baseURL = URL(string: "https://api.example.com")!
 
     public init() {}

@@ -44,5 +44,5 @@ struct LoginView: View {
     }
 }
 #Preview{
-    ServiceLocator.shared.makeLoginView()
+//    ServiceLocator.shared.makeLoginView()
 }

@@ -11,4 +11,6 @@ import Combine
 public protocol UserRepositoryProtocol {
     func login(email: String, password: String) -> AnyPublisher<User, Error>
     func signup(name: String, email: String, password: String) -> AnyPublisher<User, Error>
+    func forgotPassword(email: String) -> Bool
+
 }

@@ -9,13 +9,11 @@ import SwiftUI
 
 @main
 struct MyApp: App {
-    init() {
-           // Set environment once at app launch
-           ServiceLocator.shared.setEnvironment(.mock)
-       }
-    var body: some Scene {
-        WindowGroup {
-            ServiceLocator.shared.makeLoginView()
+        @StateObject var coordinator = MainCoordinator()
+    
+        var body: some Scene {
+            WindowGroup {
+                RootView(coordinator: coordinator)
+            }
         }
-    }
 }

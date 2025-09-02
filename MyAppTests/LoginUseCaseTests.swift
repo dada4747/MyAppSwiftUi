@@ -11,14 +11,14 @@ import Combine
 @testable import MyApp
 
 final class LoginUseCaseTests: XCTestCase {
-    var useCase: LoginUseCase!
+    var useCase: UserUseCase!
     var mockRepo: UserRepositoryProtocol!
     var cancellables: Set<AnyCancellable>!
     
     override func setUp() {
         super.setUp()
         mockRepo = UserRepositoryImpl(service: MockUserService())
-        useCase = LoginUseCase(repository: mockRepo)
+        useCase = UserUseCase(repository: mockRepo)
         cancellables = []
     }
     

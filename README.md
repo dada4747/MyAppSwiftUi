@@ -1,184 +1,59 @@
-# MyAppSwiftUi
-This repository is a reference architecture for building iOS apps with **SwiftUI, MVVM, Clean Architecture, and a Service Locator pattern**.  
+# 🧩 Swift Modular Clean Architecture (MVVM-C)
 
-It provides flexibility for real-world projects while keeping modules **portable, testable, and easy to maintain**.
+This is a demo iOS app showcasing **MVVM**, **Clean Architecture**, **Coordinators**, and **Service Locator** in a modular setup.  
+Each module (Home, User, Product) is fully independent and reusable in other apps.
 
----
-
-# iOS Modular MVVM Clean Architecture (SwiftUI)
-
-This project demonstrates how to build an iOS app using **Modular MVVM + Clean Architecture** with a **Service Locator** pattern.  
-The goal is to create reusable modules that can be copied into any project, while keeping testability, flexibility, and maintainability in mind.
+👉 Read the full breakdown on Medium: [Building a Modular and Clean MVVM Architecture with Coordinators and Service Locator](https://medium.com/@adsurerahul96/building-a-modular-and-clean-mvvm-architecture-with-coordination-and-service-locator-5a452f1c0bc0)
 
 ---
 
-## 🚀 Modular Architecture
+## ✨ Features
+- ✅ Modularized structure (Home, User, Product modules)
+- ✅ MVVM + Clean Architecture layers (Presentation, Domain, Data)
+- ✅ Coordinator-driven navigation
+- ✅ Service Locator for lightweight Dependency Injection
+- ✅ Environment switching (Mock / Live APIs)
+- ✅ Reusable modules across projects
 
-We structure the app into independent **modules**.  
-Each module contains its own:
+---
 
-- `Presentation` → Views & ViewModels  
-- `Domain` → Use Cases & Protocols  
-- `Data` → Repository Implementations & Services  
+## 🏗️ Architecture Overview
+The project follows a **Clean MVVM-C modular architecture**:
 
-### Why Modular?
-- ✅ **Reusable** → A module like `User` can be reused in another project by copying the folder.  
-- ✅ **Independent** → Each layer (UI, business logic, data) is separate.  
-- ✅ **Scalable** → Large teams can work on different modules without conflicts.  
+- **Coordinators** handle navigation.  
+- **ServiceLocator** provides repositories, use cases, and services.  
+- **Mock and Live services** can be swapped easily for testing.  
 
-Example Folder:
+<img src="images/MVVM-CCleanArchitecture.jpg" alt="Project Screenshot" width="600">
 
+👉 Full explanation with diagrams: [Medium Article](https://medium.com/@adsurerahul96/building-a-modular-and-clean-mvvm-architecture-with-coordination-and-service-locator-5a452f1c0bc0)
+
+---
+
+## 📂 Folder Structure
 <img src="images/folderStructure.jpg" alt="Project Screenshot" width="300">
 
-
----
 ---
 
-## 🧼 Clean Architecture (Layers)
+## 🚀 Getting Started
+### Requirements
+- Xcode 14.2+
+- Swift 5.7+
+- iOS 15.0+
 
-We follow **Clean Architecture principles**. Here’s a simple explanation of each layer:
+### Run the Project
 
-- **Presentation Layer**  
-  - Contains **SwiftUI Views** and **ViewModels**.  
-  - Views show UI and bind to ViewModels.  
-  - ViewModels hold UI state and trigger UseCases.  
-
-- **Domain Layer**  
-  - The **core business logic**.  
-  - Contains **Entities** (pure models) and **UseCases** (operations like Login or Signup).  
-  - Completely independent of frameworks (no SwiftUI or networking code here).  
-
-- **Data Layer**  
-  - Responsible for fetching and storing data.  
-  - Contains **Repositories** (implementing Domain protocols) and **Services** (API, Mock, or Database).  
-  - Knows how to talk to the outside world (API, storage).  
-
-### Flow
-View → ViewModel → UseCase → Repository (protocol) → RepositoryImpl → Service (Mock/Live)
-
----
-
-## 🛠 Service Locator with Mock & Live
-
-We use a **Service Locator** to create dependencies and manage environment selection.  
-
-- At app launch (`init`), we decide whether the app runs with **Mock** or **Live** services.  
-- From then, every module automatically gets the correct dependency (without rewriting code).  
-
-### Example:
-
-```swift
-@main
-struct MyApp: App {
-    init() {
-        // Set environment once at app launch
-        ServiceLocator.shared.setEnvironment(.mock) // switch .mock <-> .live
-    }
-
-    var body: some Scene {
-        WindowGroup {
-            ServiceLocator.shared.makeLoginView()
-        }
-    }
-}
+1. Clone the repo  
+```bash
+   git clone https://github.com/dada4747/MyAppSwiftUi.git
 ```
-🌍 Environment Selection
-    •    Mock → Useful for Unit Testing, UI Previews, or offline development.
-    •    Live → Real API calls in production.
-
-The environment is stored inside the Service Locator, so you can globally configure once and every module respects it.
-
+ 2. Open MyApp.xcodeproj in Xcode.
+ 3. Run on simulator or device.
+  
 ---
-
-🧭 Simple Navigation
-
-Because the Service Locator builds views with dependencies, navigation becomes one line and three words:
-```swift 
-ServiceLocator.shared.makeLoginView()
-```
-This reduces boilerplate and ensures every View has the right ViewModel, UseCase, and Repository injected automatically.
-
----
-
-🧪 Unit Testing
-
-We include Combine-based unit tests for LoginViewModel and LoginUseCase.
-
-Example LoginViewModelTests.swift:
-
-```swift
-func testLoginUpdatesUser() {
-    let expectation = XCTestExpectation(description: "Login success updates user")
+🙌 Connect
+    •    💬 Have questions? Drop an issue or comment.
+    •    📝 Full article with explanation: [Medium Article](https://medium.com/@adsurerahul96/building-a-modular-and-clean-mvvm-architecture-with-coordination-and-service-locator-5a452f1c0bc0)
+    •    🤝 Let’s connect on [LinkedIn](https://www.linkedin.com/in/rahul-adsure-186a9b16a)
     
-    viewModel.email = "test@gmail.com"
-    viewModel.password = "1234"
-    
-    viewModel.$user
-        .dropFirst()
-        .sink { user in
-            XCTAssertEqual(user?.email, "test")
-            expectation.fulfill()
-        }
-        .store(in: &cancellables)
-    
-    viewModel.login()
-    
-    wait(for: [expectation], timeout: 1.0)
-}
-```
-
 ---
-
-📂 Project Structure
-```
-/MyAppSwiftUi
- ├── Modules
- │   ├── User
- │   │    ├── Presentation
- │   │    ├── Domain
- │   │    └── Data
- │   └── Home (future module)
- ├── Core
- │   ├── ServiceLocator
- │   ├── Networking
- │   └── Utils
- ├── Tests
- │   ├── UserTests
- │   └── CoreTests
- ```
- 
----
- 
- 📸 Diagrams & Screenshots
-    •    System Design Diagram
-
-<img src="images/systemdesign.jpg" alt="Project Screenshot" width="300">
-
-
----
-
-✅ Key Takeaways
-    •    Modular → Build reusable modules and drop them into other projects.
-    •    Clean Architecture → Layers separated for testability and scalability.
-    •    Service Locator → Central place for Mock/Live environment switching.
-    •    Navigation → Simplified with locator-based view builders.
-    •    Testability → Works with Combine + XCTest.
-
----
-
-📝 Next Steps
-    •    Add more modules (Home, Dashboard, Profile).
-    •    Support per-module environments (e.g., User = Mock, Home = Live).
-    •    Add UI tests and integration tests.
-
----
-
-⚡️ Summary
-
-This repository is a reference architecture for building iOS apps with SwiftUI, MVVM, Clean Architecture, and a Service Locator pattern.
-
-It shows how to keep modules reusable, testable, and production-ready, while simplifying navigation and environment configuration.
-
----
----
-

@@ -21,4 +21,8 @@ public final class UserRepositoryImpl: UserRepositoryProtocol {
     public func signup(name: String, email: String, password: String) -> AnyPublisher<User, Error> {
         service.signup(name: name, email: email, password: password)
     }
+    public func forgotPassword(email: String) -> Bool {
+        service.forgotPassword(email: email)
+    }
+
 }

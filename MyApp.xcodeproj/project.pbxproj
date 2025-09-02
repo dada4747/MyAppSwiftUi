@@ -7,13 +7,50 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B745C2552E658E21002B7441 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2542E658E21002B7441 /* Coordinator.swift */; };
+		B745C2572E65A256002B7441 /* AppEnvironmentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2562E65A256002B7441 /* AppEnvironmentType.swift */; };
+		B745C2592E65C6B4002B7441 /* EnvironmentType 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2582E65C6B4002B7441 /* EnvironmentType 2.swift */; };
+		B745C2732E65F2B3002B7441 /* FlightNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2722E65F2B3002B7441 /* FlightNavigationView.swift */; };
+		B745C2752E65F2C8002B7441 /* FlightSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2742E65F2C8002B7441 /* FlightSearchView.swift */; };
+		B745C2772E65F2D9002B7441 /* FlightListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2762E65F2D9002B7441 /* FlightListView.swift */; };
+		B745C2792E65F2E3002B7441 /* FlightDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2782E65F2E3002B7441 /* FlightDetailView.swift */; };
+		B745C27B2E65F2EC002B7441 /* FlightBookView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C27A2E65F2EC002B7441 /* FlightBookView.swift */; };
+		B745C27D2E65F2F3002B7441 /* FlightSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C27C2E65F2F3002B7441 /* FlightSuccessView.swift */; };
+		B745C27F2E65F2FB002B7441 /* FlightFailedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C27E2E65F2FB002B7441 /* FlightFailedView.swift */; };
+		B745C2812E65F312002B7441 /* FlightSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2802E65F312002B7441 /* FlightSearchViewModel.swift */; };
+		B745C2832E65F31B002B7441 /* FlightListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2822E65F31B002B7441 /* FlightListViewModel.swift */; };
+		B745C2852E65F325002B7441 /* FlightDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2842E65F325002B7441 /* FlightDetailViewModel.swift */; };
+		B745C2872E65F32C002B7441 /* FlightBookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2862E65F32C002B7441 /* FlightBookViewModel.swift */; };
+		B745C2892E65F335002B7441 /* FlightSuccessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2882E65F335002B7441 /* FlightSuccessViewModel.swift */; };
+		B745C28B2E65F33A002B7441 /* FlightFailedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C28A2E65F33A002B7441 /* FlightFailedViewModel.swift */; };
+		B745C28D2E65F396002B7441 /* FlightCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C28C2E65F396002B7441 /* FlightCoordinator.swift */; };
+		B745C28F2E65F3D3002B7441 /* MockFlightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C28E2E65F3D3002B7441 /* MockFlightService.swift */; };
+		B745C2912E65F3DA002B7441 /* LiveFlightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2902E65F3DA002B7441 /* LiveFlightService.swift */; };
+		B745C2932E65F3E4002B7441 /* FlightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2922E65F3E4002B7441 /* FlightService.swift */; };
+		B745C2952E65F3F2002B7441 /* FlightRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2942E65F3F2002B7441 /* FlightRepository.swift */; };
+		B745C2972E65F3F7002B7441 /* FlightRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2962E65F3F7002B7441 /* FlightRepositoryImpl.swift */; };
+		B745C2992E65F3FE002B7441 /* FlightUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2982E65F3FE002B7441 /* FlightUseCase.swift */; };
+		B745C29B2E65F46A002B7441 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C29A2E65F46A002B7441 /* RootView.swift */; };
+		B745C29D2E65F4A4002B7441 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C29C2E65F4A4002B7441 /* NetworkClient.swift */; };
+		B745C2A02E65F4E6002B7441 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C29F2E65F4E6002B7441 /* AppEnvironment.swift */; };
+		B745C2A52E65F585002B7441 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2A42E65F585002B7441 /* MainCoordinator.swift */; };
+		B745C2B32E65F643002B7441 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2B22E65F643002B7441 /* HomeViewModel.swift */; };
+		B745C2B52E65F64C002B7441 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2B42E65F64C002B7441 /* HomeView.swift */; };
+		B745C2B72E65F6DF002B7441 /* ForgotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2B62E65F6DF002B7441 /* ForgotView.swift */; };
+		B745C2B92E65F6E4002B7441 /* SignupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2B82E65F6E4002B7441 /* SignupView.swift */; };
+		B745C2BB2E65F703002B7441 /* UserNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2BA2E65F703002B7441 /* UserNavigationView.swift */; };
+		B745C2BD2E65F715002B7441 /* ForgotViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2BC2E65F715002B7441 /* ForgotViewModel.swift */; };
+		B745C2BF2E65F720002B7441 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2BE2E65F720002B7441 /* SignupViewModel.swift */; };
+		B745C2C12E65F806002B7441 /* UserModuleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2C02E65F806002B7441 /* UserModuleCoordinator.swift */; };
+		B745C2C62E6607A5002B7441 /* HomeModuleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2C52E6607A5002B7441 /* HomeModuleCoordinator.swift */; };
+		B745C2CA2E660E87002B7441 /* FlightServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2C92E660E87002B7441 /* FlightServiceLocator.swift */; };
+		B745C2CC2E660E90002B7441 /* UserServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2CB2E660E90002B7441 /* UserServiceLocator.swift */; };
 		B76BF60A2E64B57000D3D638 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B76BF5FD2E64B57000D3D638 /* Preview Assets.xcassets */; };
 		B76BF60B2E64B57000D3D638 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B76BF5FF2E64B57000D3D638 /* Assets.xcassets */; };
-		B76BF60E2E64B57000D3D638 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BF6022E64B57000D3D638 /* LoginUseCase.swift */; };
+		B76BF60E2E64B57000D3D638 /* UserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BF6022E64B57000D3D638 /* UserUseCase.swift */; };
 		B76BF60F2E64B57000D3D638 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BF6032E64B57000D3D638 /* LoginView.swift */; };
 		B76BF6102E64B57000D3D638 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BF6042E64B57000D3D638 /* LoginViewModel.swift */; };
 		B76BF6112E64B57000D3D638 /* MyApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BF6052E64B57000D3D638 /* MyApp.swift */; };
-		B76BF6122E64B57000D3D638 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BF6062E64B57000D3D638 /* ServiceLocator.swift */; };
 		B76BF6132E64B57000D3D638 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BF6072E64B57000D3D638 /* User.swift */; };
 		B76BF6142E64B57000D3D638 /* UserRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BF6082E64B57000D3D638 /* UserRepositoryProtocol.swift */; };
 		B76BF6292E64B99300D3D638 /* UserRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BF6282E64B99300D3D638 /* UserRepositoryImpl.swift */; };
@@ -36,14 +73,51 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B745C2542E658E21002B7441 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		B745C2562E65A256002B7441 /* AppEnvironmentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironmentType.swift; sourceTree = "<group>"; };
+		B745C2582E65C6B4002B7441 /* EnvironmentType 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentType 2.swift"; sourceTree = "<group>"; };
+		B745C2722E65F2B3002B7441 /* FlightNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightNavigationView.swift; sourceTree = "<group>"; };
+		B745C2742E65F2C8002B7441 /* FlightSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSearchView.swift; sourceTree = "<group>"; };
+		B745C2762E65F2D9002B7441 /* FlightListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightListView.swift; sourceTree = "<group>"; };
+		B745C2782E65F2E3002B7441 /* FlightDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailView.swift; sourceTree = "<group>"; };
+		B745C27A2E65F2EC002B7441 /* FlightBookView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightBookView.swift; sourceTree = "<group>"; };
+		B745C27C2E65F2F3002B7441 /* FlightSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSuccessView.swift; sourceTree = "<group>"; };
+		B745C27E2E65F2FB002B7441 /* FlightFailedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightFailedView.swift; sourceTree = "<group>"; };
+		B745C2802E65F312002B7441 /* FlightSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSearchViewModel.swift; sourceTree = "<group>"; };
+		B745C2822E65F31B002B7441 /* FlightListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightListViewModel.swift; sourceTree = "<group>"; };
+		B745C2842E65F325002B7441 /* FlightDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailViewModel.swift; sourceTree = "<group>"; };
+		B745C2862E65F32C002B7441 /* FlightBookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightBookViewModel.swift; sourceTree = "<group>"; };
+		B745C2882E65F335002B7441 /* FlightSuccessViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSuccessViewModel.swift; sourceTree = "<group>"; };
+		B745C28A2E65F33A002B7441 /* FlightFailedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightFailedViewModel.swift; sourceTree = "<group>"; };
+		B745C28C2E65F396002B7441 /* FlightCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightCoordinator.swift; sourceTree = "<group>"; };
+		B745C28E2E65F3D3002B7441 /* MockFlightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFlightService.swift; sourceTree = "<group>"; };
+		B745C2902E65F3DA002B7441 /* LiveFlightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveFlightService.swift; sourceTree = "<group>"; };
+		B745C2922E65F3E4002B7441 /* FlightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightService.swift; sourceTree = "<group>"; };
+		B745C2942E65F3F2002B7441 /* FlightRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightRepository.swift; sourceTree = "<group>"; };
+		B745C2962E65F3F7002B7441 /* FlightRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightRepositoryImpl.swift; sourceTree = "<group>"; };
+		B745C2982E65F3FE002B7441 /* FlightUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightUseCase.swift; sourceTree = "<group>"; };
+		B745C29A2E65F46A002B7441 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		B745C29C2E65F4A4002B7441 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		B745C29F2E65F4E6002B7441 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
+		B745C2A42E65F585002B7441 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		B745C2B22E65F643002B7441 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		B745C2B42E65F64C002B7441 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		B745C2B62E65F6DF002B7441 /* ForgotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotView.swift; sourceTree = "<group>"; };
+		B745C2B82E65F6E4002B7441 /* SignupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupView.swift; sourceTree = "<group>"; };
+		B745C2BA2E65F703002B7441 /* UserNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNavigationView.swift; sourceTree = "<group>"; };
+		B745C2BC2E65F715002B7441 /* ForgotViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotViewModel.swift; sourceTree = "<group>"; };
+		B745C2BE2E65F720002B7441 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
+		B745C2C02E65F806002B7441 /* UserModuleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModuleCoordinator.swift; sourceTree = "<group>"; };
+		B745C2C52E6607A5002B7441 /* HomeModuleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModuleCoordinator.swift; sourceTree = "<group>"; };
+		B745C2C92E660E87002B7441 /* FlightServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightServiceLocator.swift; sourceTree = "<group>"; };
+		B745C2CB2E660E90002B7441 /* UserServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceLocator.swift; sourceTree = "<group>"; };
 		B76BF5DE2E64B44200D3D638 /* MyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B76BF5FD2E64B57000D3D638 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B76BF5FF2E64B57000D3D638 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B76BF6022E64B57000D3D638 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
+		B76BF6022E64B57000D3D638 /* UserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserUseCase.swift; sourceTree = "<group>"; };
 		B76BF6032E64B57000D3D638 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		B76BF6042E64B57000D3D638 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		B76BF6052E64B57000D3D638 /* MyApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyApp.swift; sourceTree = "<group>"; };
-		B76BF6062E64B57000D3D638 /* ServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
 		B76BF6072E64B57000D3D638 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B76BF6082E64B57000D3D638 /* UserRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryProtocol.swift; sourceTree = "<group>"; };
 		B76BF6282E64B99300D3D638 /* UserRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositoryImpl.swift; sourceTree = "<group>"; };
@@ -74,6 +148,343 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B745C25A2E65EF43002B7441 /* ShoopingCart */ = {
+			isa = PBXGroup;
+			children = (
+				B745C2CF2E6613FA002B7441 /* DI */,
+				B745C25B2E65EF61002B7441 /* Presentation */,
+				B745C25D2E65EF69002B7441 /* Domain */,
+				B745C25F2E65EFD5002B7441 /* Data */,
+			);
+			path = ShoopingCart;
+			sourceTree = "<group>";
+		};
+		B745C25B2E65EF61002B7441 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				B745C2A62E65F5DB002B7441 /* Coordination */,
+				B745C25E2E65EF88002B7441 /* Views */,
+				B745C25C2E65EF68002B7441 /* ViewModels */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		B745C25C2E65EF68002B7441 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B745C25D2E65EF69002B7441 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B745C2622E65F008002B7441 /* UseCase */,
+				B745C2632E65F00C002B7441 /* Model */,
+				B745C2642E65F01E002B7441 /* Repository */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		B745C25E2E65EF88002B7441 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B745C25F2E65EFD5002B7441 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B745C2652E65F03E002B7441 /* RepositoryImpl */,
+				B745C2662E65F040002B7441 /* Service */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B745C2622E65F008002B7441 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		B745C2632E65F00C002B7441 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B745C2642E65F01E002B7441 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		B745C2652E65F03E002B7441 /* RepositoryImpl */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RepositoryImpl;
+			sourceTree = "<group>";
+		};
+		B745C2662E65F040002B7441 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B745C2672E65F078002B7441 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B745C2722E65F2B3002B7441 /* FlightNavigationView.swift */,
+				B745C2742E65F2C8002B7441 /* FlightSearchView.swift */,
+				B745C2762E65F2D9002B7441 /* FlightListView.swift */,
+				B745C2782E65F2E3002B7441 /* FlightDetailView.swift */,
+				B745C27A2E65F2EC002B7441 /* FlightBookView.swift */,
+				B745C27C2E65F2F3002B7441 /* FlightSuccessView.swift */,
+				B745C27E2E65F2FB002B7441 /* FlightFailedView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B745C2682E65F078002B7441 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B745C2802E65F312002B7441 /* FlightSearchViewModel.swift */,
+				B745C2822E65F31B002B7441 /* FlightListViewModel.swift */,
+				B745C2842E65F325002B7441 /* FlightDetailViewModel.swift */,
+				B745C2862E65F32C002B7441 /* FlightBookViewModel.swift */,
+				B745C2882E65F335002B7441 /* FlightSuccessViewModel.swift */,
+				B745C28A2E65F33A002B7441 /* FlightFailedViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B745C2692E65F078002B7441 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				B745C2712E65F078002B7441 /* Coordination */,
+				B745C2672E65F078002B7441 /* Views */,
+				B745C2682E65F078002B7441 /* ViewModels */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		B745C26A2E65F078002B7441 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				B745C2982E65F3FE002B7441 /* FlightUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		B745C26B2E65F078002B7441 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B745C26C2E65F078002B7441 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				B745C2942E65F3F2002B7441 /* FlightRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		B745C26D2E65F078002B7441 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B745C26A2E65F078002B7441 /* UseCase */,
+				B745C26B2E65F078002B7441 /* Model */,
+				B745C26C2E65F078002B7441 /* Repository */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		B745C26E2E65F078002B7441 /* RepositoryImpl */ = {
+			isa = PBXGroup;
+			children = (
+				B745C2962E65F3F7002B7441 /* FlightRepositoryImpl.swift */,
+			);
+			path = RepositoryImpl;
+			sourceTree = "<group>";
+		};
+		B745C26F2E65F078002B7441 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B745C2922E65F3E4002B7441 /* FlightService.swift */,
+				B745C28E2E65F3D3002B7441 /* MockFlightService.swift */,
+				B745C2902E65F3DA002B7441 /* LiveFlightService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B745C2702E65F078002B7441 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B745C26E2E65F078002B7441 /* RepositoryImpl */,
+				B745C26F2E65F078002B7441 /* Service */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B745C2712E65F078002B7441 /* Coordination */ = {
+			isa = PBXGroup;
+			children = (
+				B745C28C2E65F396002B7441 /* FlightCoordinator.swift */,
+			);
+			path = Coordination;
+			sourceTree = "<group>";
+		};
+		B745C29E2E65F4C0002B7441 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				B745C2562E65A256002B7441 /* AppEnvironmentType.swift */,
+				B745C29F2E65F4E6002B7441 /* AppEnvironment.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		B745C2A32E65F578002B7441 /* Coordination */ = {
+			isa = PBXGroup;
+			children = (
+				B745C2A42E65F585002B7441 /* MainCoordinator.swift */,
+			);
+			path = Coordination;
+			sourceTree = "<group>";
+		};
+		B745C2A62E65F5DB002B7441 /* Coordination */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordination;
+			sourceTree = "<group>";
+		};
+		B745C2A72E65F634002B7441 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B745C2B42E65F64C002B7441 /* HomeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B745C2A82E65F634002B7441 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B745C2B22E65F643002B7441 /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B745C2A92E65F634002B7441 /* Coordination */ = {
+			isa = PBXGroup;
+			children = (
+				B745C2C52E6607A5002B7441 /* HomeModuleCoordinator.swift */,
+			);
+			path = Coordination;
+			sourceTree = "<group>";
+		};
+		B745C2AA2E65F634002B7441 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				B745C2A72E65F634002B7441 /* Views */,
+				B745C2A82E65F634002B7441 /* ViewModels */,
+				B745C2A92E65F634002B7441 /* Coordination */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		B745C2AB2E65F634002B7441 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		B745C2AC2E65F634002B7441 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B745C2AD2E65F634002B7441 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		B745C2AE2E65F634002B7441 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				B745C2AB2E65F634002B7441 /* UseCase */,
+				B745C2AC2E65F634002B7441 /* Model */,
+				B745C2AD2E65F634002B7441 /* Repository */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		B745C2AF2E65F634002B7441 /* RepositoryImpl */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RepositoryImpl;
+			sourceTree = "<group>";
+		};
+		B745C2B02E65F634002B7441 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		B745C2B12E65F634002B7441 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B745C2AF2E65F634002B7441 /* RepositoryImpl */,
+				B745C2B02E65F634002B7441 /* Service */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		B745C2C22E65F80A002B7441 /* Coordination */ = {
+			isa = PBXGroup;
+			children = (
+				B745C2C02E65F806002B7441 /* UserModuleCoordinator.swift */,
+			);
+			path = Coordination;
+			sourceTree = "<group>";
+		};
+		B745C2CD2E66135A002B7441 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				B745C2C92E660E87002B7441 /* FlightServiceLocator.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		B745C2CE2E66136B002B7441 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				B745C2CB2E660E90002B7441 /* UserServiceLocator.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		B745C2CF2E6613FA002B7441 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
 		B76BF5D52E64B44200D3D638 = {
 			isa = PBXGroup;
 			children = (
@@ -117,7 +528,8 @@
 			children = (
 				B76BF61B2E64B65000D3D638 /* User */,
 				B76BF6302E64BE2100D3D638 /* Home */,
-				B76BF6312E64BE2800D3D638 /* Shopping */,
+				B745C25A2E65EF43002B7441 /* ShoopingCart */,
+				B76BF6312E64BE2800D3D638 /* Flight */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -125,20 +537,13 @@
 		B76BF6162E64B5BA00D3D638 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				B76BF6172E64B5BB00D3D638 /* DI */,
+				B745C2A32E65F578002B7441 /* Coordination */,
+				B745C29E2E65F4C0002B7441 /* Environment */,
 				B76BF6192E64B5BC00D3D638 /* Networking */,
 				B76BF6182E64B5BC00D3D638 /* Utility */,
 				B76BF61A2E64B5BD00D3D638 /* Common UI */,
 			);
 			path = Core;
-			sourceTree = "<group>";
-		};
-		B76BF6172E64B5BB00D3D638 /* DI */ = {
-			isa = PBXGroup;
-			children = (
-				B76BF6062E64B57000D3D638 /* ServiceLocator.swift */,
-			);
-			path = DI;
 			sourceTree = "<group>";
 		};
 		B76BF6182E64B5BC00D3D638 /* Utility */ = {
@@ -151,6 +556,7 @@
 		B76BF6192E64B5BC00D3D638 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				B745C29C2E65F4A4002B7441 /* NetworkClient.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -158,6 +564,8 @@
 		B76BF61A2E64B5BD00D3D638 /* Common UI */ = {
 			isa = PBXGroup;
 			children = (
+				B745C2582E65C6B4002B7441 /* EnvironmentType 2.swift */,
+				B745C2542E658E21002B7441 /* Coordinator.swift */,
 			);
 			path = "Common UI";
 			sourceTree = "<group>";
@@ -165,6 +573,7 @@
 		B76BF61B2E64B65000D3D638 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				B745C2CE2E66136B002B7441 /* DI */,
 				B76BF6202E64B65500D3D638 /* Presentation */,
 				B76BF61C2E64B65000D3D638 /* Domain */,
 				B76BF6232E64B65A00D3D638 /* Data */,
@@ -201,7 +610,7 @@
 		B76BF61F2E64B65300D3D638 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
-				B76BF6022E64B57000D3D638 /* LoginUseCase.swift */,
+				B76BF6022E64B57000D3D638 /* UserUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -209,6 +618,7 @@
 		B76BF6202E64B65500D3D638 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				B745C2C22E65F80A002B7441 /* Coordination */,
 				B76BF6212E64B65700D3D638 /* Views */,
 				B76BF6222E64B65800D3D638 /* ViewModels */,
 			);
@@ -218,7 +628,10 @@
 		B76BF6212E64B65700D3D638 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B745C2BA2E65F703002B7441 /* UserNavigationView.swift */,
 				B76BF6032E64B57000D3D638 /* LoginView.swift */,
+				B745C2B62E65F6DF002B7441 /* ForgotView.swift */,
+				B745C2B82E65F6E4002B7441 /* SignupView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -227,6 +640,8 @@
 			isa = PBXGroup;
 			children = (
 				B76BF6042E64B57000D3D638 /* LoginViewModel.swift */,
+				B745C2BC2E65F715002B7441 /* ForgotViewModel.swift */,
+				B745C2BE2E65F720002B7441 /* SignupViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -261,21 +676,29 @@
 		B76BF6302E64BE2100D3D638 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				B745C2AA2E65F634002B7441 /* Presentation */,
+				B745C2AE2E65F634002B7441 /* Domain */,
+				B745C2B12E65F634002B7441 /* Data */,
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		B76BF6312E64BE2800D3D638 /* Shopping */ = {
+		B76BF6312E64BE2800D3D638 /* Flight */ = {
 			isa = PBXGroup;
 			children = (
+				B745C2CD2E66135A002B7441 /* DI */,
+				B745C2692E65F078002B7441 /* Presentation */,
+				B745C26D2E65F078002B7441 /* Domain */,
+				B745C2702E65F078002B7441 /* Data */,
 			);
-			path = Shopping;
+			path = Flight;
 			sourceTree = "<group>";
 		};
 		B76BF6322E64BEBE00D3D638 /* App */ = {
 			isa = PBXGroup;
 			children = (
 				B76BF6052E64B57000D3D638 /* MyApp.swift */,
+				B745C29A2E65F46A002B7441 /* RootView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -395,17 +818,54 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B745C28F2E65F3D3002B7441 /* MockFlightService.swift in Sources */,
+				B745C2892E65F335002B7441 /* FlightSuccessViewModel.swift in Sources */,
+				B745C27D2E65F2F3002B7441 /* FlightSuccessView.swift in Sources */,
+				B745C2B32E65F643002B7441 /* HomeViewModel.swift in Sources */,
+				B745C2B92E65F6E4002B7441 /* SignupView.swift in Sources */,
+				B745C2A02E65F4E6002B7441 /* AppEnvironment.swift in Sources */,
+				B745C2752E65F2C8002B7441 /* FlightSearchView.swift in Sources */,
+				B745C29B2E65F46A002B7441 /* RootView.swift in Sources */,
+				B745C2772E65F2D9002B7441 /* FlightListView.swift in Sources */,
+				B745C28D2E65F396002B7441 /* FlightCoordinator.swift in Sources */,
 				B76BF62B2E64BB3900D3D638 /* UserServiceProtocol.swift in Sources */,
 				B76BF6292E64B99300D3D638 /* UserRepositoryImpl.swift in Sources */,
-				B76BF60E2E64B57000D3D638 /* LoginUseCase.swift in Sources */,
+				B76BF60E2E64B57000D3D638 /* UserUseCase.swift in Sources */,
+				B745C2BB2E65F703002B7441 /* UserNavigationView.swift in Sources */,
+				B745C2B52E65F64C002B7441 /* HomeView.swift in Sources */,
 				B76BF62D2E64BB5000D3D638 /* MockUserService.swift in Sources */,
+				B745C27B2E65F2EC002B7441 /* FlightBookView.swift in Sources */,
+				B745C2812E65F312002B7441 /* FlightSearchViewModel.swift in Sources */,
+				B745C2572E65A256002B7441 /* AppEnvironmentType.swift in Sources */,
+				B745C2B72E65F6DF002B7441 /* ForgotView.swift in Sources */,
+				B745C2A52E65F585002B7441 /* MainCoordinator.swift in Sources */,
+				B745C28B2E65F33A002B7441 /* FlightFailedViewModel.swift in Sources */,
 				B76BF6342E64C44000D3D638 /* LiveUserService.swift in Sources */,
+				B745C2CA2E660E87002B7441 /* FlightServiceLocator.swift in Sources */,
+				B745C2952E65F3F2002B7441 /* FlightRepository.swift in Sources */,
+				B745C2C62E6607A5002B7441 /* HomeModuleCoordinator.swift in Sources */,
 				B76BF60F2E64B57000D3D638 /* LoginView.swift in Sources */,
+				B745C2592E65C6B4002B7441 /* EnvironmentType 2.swift in Sources */,
+				B745C2932E65F3E4002B7441 /* FlightService.swift in Sources */,
+				B745C2972E65F3F7002B7441 /* FlightRepositoryImpl.swift in Sources */,
 				B76BF6102E64B57000D3D638 /* LoginViewModel.swift in Sources */,
+				B745C2792E65F2E3002B7441 /* FlightDetailView.swift in Sources */,
+				B745C29D2E65F4A4002B7441 /* NetworkClient.swift in Sources */,
+				B745C2BF2E65F720002B7441 /* SignupViewModel.swift in Sources */,
+				B745C2912E65F3DA002B7441 /* LiveFlightService.swift in Sources */,
 				B76BF6112E64B57000D3D638 /* MyApp.swift in Sources */,
-				B76BF6122E64B57000D3D638 /* ServiceLocator.swift in Sources */,
+				B745C2832E65F31B002B7441 /* FlightListViewModel.swift in Sources */,
+				B745C2CC2E660E90002B7441 /* UserServiceLocator.swift in Sources */,
+				B745C2552E658E21002B7441 /* Coordinator.swift in Sources */,
+				B745C2992E65F3FE002B7441 /* FlightUseCase.swift in Sources */,
+				B745C2852E65F325002B7441 /* FlightDetailViewModel.swift in Sources */,
 				B76BF6132E64B57000D3D638 /* User.swift in Sources */,
+				B745C2BD2E65F715002B7441 /* ForgotViewModel.swift in Sources */,
+				B745C2C12E65F806002B7441 /* UserModuleCoordinator.swift in Sources */,
+				B745C2872E65F32C002B7441 /* FlightBookViewModel.swift in Sources */,
 				B76BF6142E64B57000D3D638 /* UserRepositoryProtocol.swift in Sources */,
+				B745C2732E65F2B3002B7441 /* FlightNavigationView.swift in Sources */,
+				B745C27F2E65F2FB002B7441 /* FlightFailedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,7 +1016,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MVVM_SwiftUi_Modular/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MyApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -584,7 +1044,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"MVVM_SwiftUi_Modular/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"MyApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

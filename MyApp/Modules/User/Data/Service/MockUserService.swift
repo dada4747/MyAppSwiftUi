@@ -9,6 +9,12 @@ import Combine
 import Foundation
 
 public final class MockUserService: UserServiceProtocol {
+    public func forgotPassword(email: String) -> Bool {
+        print("Mock forgot password for \(email)")
+        return true
+    
+    }
+    
     public var shouldSucceed = true
     public init() {}
 

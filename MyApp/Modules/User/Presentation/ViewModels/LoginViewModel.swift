@@ -11,6 +11,8 @@ import Foundation
 
 public final class LoginViewModel: ObservableObject {
     // Inputs
+    @Published var coordinator: UserModuleCoordinator
+
     @Published public var email: String = ""
     @Published public var password: String = ""
 
@@ -20,14 +22,20 @@ public final class LoginViewModel: ObservableObject {
     @Published public var errorMessage: String?
     @Published public var isLoginEnabled: Bool = false
 
-    private let loginUseCase: LoginUseCase
+    private let loginUseCase: UserUseCase
     private var cancellables = Set<AnyCancellable>()
 
-    public init(loginUseCase: LoginUseCase) {
-        self.loginUseCase = loginUseCase
-        setupValidation()
-    }
+//    public init(loginUseCase: LoginUseCase) {
+//        self.loginUseCase = loginUseCase
+//        setupValidation()
+//    }
 
+    init(coordinator: UserModuleCoordinator, useCase: UserUseCase) {
+        self.coordinator = coordinator
+        self.loginUseCase = useCase
+                setupValidation()
+
+    }
     private func setupValidation() {
         Publishers.CombineLatest($email, $password)
             .map { email, password in
@@ -50,7 +58,15 @@ public final class LoginViewModel: ObservableObject {
                 }
             } receiveValue: { [weak self] user in
                 self?.user = user
+                self?.goToHome()
             }
             .store(in: &cancellables)
     }
+    func goToSignup() { coordinator.navigate(to: .signup) }
+    func goToForgot() { coordinator.navigate(to: .forgot) }
+    func goToHome(){
+            coordinator.goToHome()
+    }
+    
+    
 }

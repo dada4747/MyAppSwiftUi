@@ -17,7 +17,7 @@ final class LoginViewModelTests: XCTestCase {
     override func setUp() {
         super.setUp()
         let repo = UserRepositoryImpl(service: MockUserService())
-        let useCase = LoginUseCase(repository: repo)
+        let useCase = UserUseCase(repository: repo)
         viewModel = LoginViewModel(loginUseCase: useCase)
         cancellables = []
     }
