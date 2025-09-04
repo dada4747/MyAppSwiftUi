@@ -23,5 +23,8 @@ class HomeViewModel: ObservableObject {
     func goToFlight() {
         mainCoordinator.goToModule(.flight)
     }
+    func goToProduct() {
+        mainCoordinator.goToModule(.product)
+    }
     
 }

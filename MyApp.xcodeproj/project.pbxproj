@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B73FE5812E6776D80084F311 /* ProductModule2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73FE5802E6776D80084F311 /* ProductModule2.swift */; };
 		B745C2552E658E21002B7441 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2542E658E21002B7441 /* Coordinator.swift */; };
 		B745C2572E65A256002B7441 /* AppEnvironmentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2562E65A256002B7441 /* AppEnvironmentType.swift */; };
-		B745C2592E65C6B4002B7441 /* EnvironmentType 2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2582E65C6B4002B7441 /* EnvironmentType 2.swift */; };
+		B745C2592E65C6B4002B7441 /* ProductModule1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2582E65C6B4002B7441 /* ProductModule1.swift */; };
 		B745C2732E65F2B3002B7441 /* FlightNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2722E65F2B3002B7441 /* FlightNavigationView.swift */; };
 		B745C2752E65F2C8002B7441 /* FlightSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2742E65F2C8002B7441 /* FlightSearchView.swift */; };
 		B745C2772E65F2D9002B7441 /* FlightListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2762E65F2D9002B7441 /* FlightListView.swift */; };
@@ -60,6 +61,25 @@
 		B76BF6482E64C72500D3D638 /* MyAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BF6462E64C72500D3D638 /* MyAppTests.swift */; };
 		B76BF64B2E64C7C900D3D638 /* LoginUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BF64A2E64C7C900D3D638 /* LoginUseCaseTests.swift */; };
 		B76BF64D2E64C81300D3D638 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76BF64C2E64C81300D3D638 /* LoginViewModelTests.swift */; };
+		B7FA1AF02E6A27630087B825 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA1AEF2E6A27630087B825 /* ProductDetailView.swift */; };
+		B7FA1AF22E6A27770087B825 /* ProductSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA1AF12E6A27770087B825 /* ProductSuccessView.swift */; };
+		B7FA1AF42E6A27800087B825 /* ProductPaymentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA1AF32E6A27800087B825 /* ProductPaymentView.swift */; };
+		B7FA1AF62E6A278C0087B825 /* ProductBuyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA1AF52E6A278C0087B825 /* ProductBuyView.swift */; };
+		B7FA1AF82E6A27970087B825 /* ProductSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA1AF72E6A27970087B825 /* ProductSearchView.swift */; };
+		B7FA1AFA2E6A27AB0087B825 /* ProductNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA1AF92E6A27AB0087B825 /* ProductNavigationView.swift */; };
+		B7FA1AFC2E6A27BB0087B825 /* ProductCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA1AFB2E6A27BB0087B825 /* ProductCoordinator.swift */; };
+		B7FA1AFE2E6A27C90087B825 /* ProductSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA1AFD2E6A27C90087B825 /* ProductSearchViewModel.swift */; };
+		B7FA1B002E6A27D40087B825 /* ProductDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA1AFF2E6A27D40087B825 /* ProductDetailViewModel.swift */; };
+		B7FA1B022E6A27E10087B825 /* ProductBuyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA1B012E6A27E10087B825 /* ProductBuyViewModel.swift */; };
+		B7FA1B042E6A27E80087B825 /* ProductPaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA1B032E6A27E80087B825 /* ProductPaymentViewModel.swift */; };
+		B7FA1B062E6A27EE0087B825 /* ProductSuccessViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA1B052E6A27EE0087B825 /* ProductSuccessViewModel.swift */; };
+		B7FA1B082E6A27FD0087B825 /* ProductUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA1B072E6A27FD0087B825 /* ProductUseCase.swift */; };
+		B7FA1B0A2E6A28050087B825 /* ProductRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA1B092E6A28050087B825 /* ProductRepositoryImpl.swift */; };
+		B7FA1B0C2E6A28100087B825 /* ProductRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA1B0B2E6A28100087B825 /* ProductRepository.swift */; };
+		B7FA1B0E2E6A28190087B825 /* LiveProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA1B0D2E6A28190087B825 /* LiveProductService.swift */; };
+		B7FA1B102E6A28200087B825 /* MockProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA1B0F2E6A28200087B825 /* MockProductService.swift */; };
+		B7FA1B142E6A28390087B825 /* ProductServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA1B132E6A28390087B825 /* ProductServiceProtocol.swift */; };
+		B7FA1B162E6A29400087B825 /* ProductDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7FA1B152E6A29400087B825 /* ProductDIContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,9 +93,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B73FE5802E6776D80084F311 /* ProductModule2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModule2.swift; sourceTree = "<group>"; };
 		B745C2542E658E21002B7441 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		B745C2562E65A256002B7441 /* AppEnvironmentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironmentType.swift; sourceTree = "<group>"; };
-		B745C2582E65C6B4002B7441 /* EnvironmentType 2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EnvironmentType 2.swift"; sourceTree = "<group>"; };
+		B745C2582E65C6B4002B7441 /* ProductModule1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModule1.swift; sourceTree = "<group>"; };
 		B745C2722E65F2B3002B7441 /* FlightNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightNavigationView.swift; sourceTree = "<group>"; };
 		B745C2742E65F2C8002B7441 /* FlightSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSearchView.swift; sourceTree = "<group>"; };
 		B745C2762E65F2D9002B7441 /* FlightListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightListView.swift; sourceTree = "<group>"; };
@@ -128,6 +149,25 @@
 		B76BF6462E64C72500D3D638 /* MyAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAppTests.swift; sourceTree = "<group>"; };
 		B76BF64A2E64C7C900D3D638 /* LoginUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCaseTests.swift; sourceTree = "<group>"; };
 		B76BF64C2E64C81300D3D638 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
+		B7FA1AEF2E6A27630087B825 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
+		B7FA1AF12E6A27770087B825 /* ProductSuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSuccessView.swift; sourceTree = "<group>"; };
+		B7FA1AF32E6A27800087B825 /* ProductPaymentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPaymentView.swift; sourceTree = "<group>"; };
+		B7FA1AF52E6A278C0087B825 /* ProductBuyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductBuyView.swift; sourceTree = "<group>"; };
+		B7FA1AF72E6A27970087B825 /* ProductSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSearchView.swift; sourceTree = "<group>"; };
+		B7FA1AF92E6A27AB0087B825 /* ProductNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductNavigationView.swift; sourceTree = "<group>"; };
+		B7FA1AFB2E6A27BB0087B825 /* ProductCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCoordinator.swift; sourceTree = "<group>"; };
+		B7FA1AFD2E6A27C90087B825 /* ProductSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSearchViewModel.swift; sourceTree = "<group>"; };
+		B7FA1AFF2E6A27D40087B825 /* ProductDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewModel.swift; sourceTree = "<group>"; };
+		B7FA1B012E6A27E10087B825 /* ProductBuyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductBuyViewModel.swift; sourceTree = "<group>"; };
+		B7FA1B032E6A27E80087B825 /* ProductPaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPaymentViewModel.swift; sourceTree = "<group>"; };
+		B7FA1B052E6A27EE0087B825 /* ProductSuccessViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSuccessViewModel.swift; sourceTree = "<group>"; };
+		B7FA1B072E6A27FD0087B825 /* ProductUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductUseCase.swift; sourceTree = "<group>"; };
+		B7FA1B092E6A28050087B825 /* ProductRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRepositoryImpl.swift; sourceTree = "<group>"; };
+		B7FA1B0B2E6A28100087B825 /* ProductRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRepository.swift; sourceTree = "<group>"; };
+		B7FA1B0D2E6A28190087B825 /* LiveProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveProductService.swift; sourceTree = "<group>"; };
+		B7FA1B0F2E6A28200087B825 /* MockProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockProductService.swift; sourceTree = "<group>"; };
+		B7FA1B132E6A28390087B825 /* ProductServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductServiceProtocol.swift; sourceTree = "<group>"; };
+		B7FA1B152E6A29400087B825 /* ProductDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDIContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,7 +188,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B745C25A2E65EF43002B7441 /* ShoopingCart */ = {
+		B745C25A2E65EF43002B7441 /* Product */ = {
 			isa = PBXGroup;
 			children = (
 				B745C2CF2E6613FA002B7441 /* DI */,
@@ -156,7 +196,7 @@
 				B745C25D2E65EF69002B7441 /* Domain */,
 				B745C25F2E65EFD5002B7441 /* Data */,
 			);
-			path = ShoopingCart;
+			path = Product;
 			sourceTree = "<group>";
 		};
 		B745C25B2E65EF61002B7441 /* Presentation */ = {
@@ -172,6 +212,11 @@
 		B745C25C2E65EF68002B7441 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				B7FA1AFD2E6A27C90087B825 /* ProductSearchViewModel.swift */,
+				B7FA1AFF2E6A27D40087B825 /* ProductDetailViewModel.swift */,
+				B7FA1B012E6A27E10087B825 /* ProductBuyViewModel.swift */,
+				B7FA1B032E6A27E80087B825 /* ProductPaymentViewModel.swift */,
+				B7FA1B052E6A27EE0087B825 /* ProductSuccessViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -189,6 +234,12 @@
 		B745C25E2E65EF88002B7441 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B7FA1AF92E6A27AB0087B825 /* ProductNavigationView.swift */,
+				B7FA1AEF2E6A27630087B825 /* ProductDetailView.swift */,
+				B7FA1AF72E6A27970087B825 /* ProductSearchView.swift */,
+				B7FA1AF52E6A278C0087B825 /* ProductBuyView.swift */,
+				B7FA1AF12E6A27770087B825 /* ProductSuccessView.swift */,
+				B7FA1AF32E6A27800087B825 /* ProductPaymentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -205,6 +256,7 @@
 		B745C2622E65F008002B7441 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				B7FA1B072E6A27FD0087B825 /* ProductUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -219,6 +271,7 @@
 		B745C2642E65F01E002B7441 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				B7FA1B0B2E6A28100087B825 /* ProductRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -226,6 +279,7 @@
 		B745C2652E65F03E002B7441 /* RepositoryImpl */ = {
 			isa = PBXGroup;
 			children = (
+				B7FA1B092E6A28050087B825 /* ProductRepositoryImpl.swift */,
 			);
 			path = RepositoryImpl;
 			sourceTree = "<group>";
@@ -233,6 +287,9 @@
 		B745C2662E65F040002B7441 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				B7FA1B132E6A28390087B825 /* ProductServiceProtocol.swift */,
+				B7FA1B0D2E6A28190087B825 /* LiveProductService.swift */,
+				B7FA1B0F2E6A28200087B825 /* MockProductService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -362,6 +419,7 @@
 		B745C2A62E65F5DB002B7441 /* Coordination */ = {
 			isa = PBXGroup;
 			children = (
+				B7FA1AFB2E6A27BB0087B825 /* ProductCoordinator.swift */,
 			);
 			path = Coordination;
 			sourceTree = "<group>";
@@ -481,6 +539,7 @@
 		B745C2CF2E6613FA002B7441 /* DI */ = {
 			isa = PBXGroup;
 			children = (
+				B7FA1B152E6A29400087B825 /* ProductDIContainer.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -528,7 +587,7 @@
 			children = (
 				B76BF61B2E64B65000D3D638 /* User */,
 				B76BF6302E64BE2100D3D638 /* Home */,
-				B745C25A2E65EF43002B7441 /* ShoopingCart */,
+				B745C25A2E65EF43002B7441 /* Product */,
 				B76BF6312E64BE2800D3D638 /* Flight */,
 			);
 			path = Modules;
@@ -564,7 +623,8 @@
 		B76BF61A2E64B5BD00D3D638 /* Common UI */ = {
 			isa = PBXGroup;
 			children = (
-				B745C2582E65C6B4002B7441 /* EnvironmentType 2.swift */,
+				B745C2582E65C6B4002B7441 /* ProductModule1.swift */,
+				B73FE5802E6776D80084F311 /* ProductModule2.swift */,
 				B745C2542E658E21002B7441 /* Coordinator.swift */,
 			);
 			path = "Common UI";
@@ -823,48 +883,68 @@
 				B745C27D2E65F2F3002B7441 /* FlightSuccessView.swift in Sources */,
 				B745C2B32E65F643002B7441 /* HomeViewModel.swift in Sources */,
 				B745C2B92E65F6E4002B7441 /* SignupView.swift in Sources */,
+				B7FA1AF42E6A27800087B825 /* ProductPaymentView.swift in Sources */,
 				B745C2A02E65F4E6002B7441 /* AppEnvironment.swift in Sources */,
 				B745C2752E65F2C8002B7441 /* FlightSearchView.swift in Sources */,
 				B745C29B2E65F46A002B7441 /* RootView.swift in Sources */,
 				B745C2772E65F2D9002B7441 /* FlightListView.swift in Sources */,
+				B7FA1AFA2E6A27AB0087B825 /* ProductNavigationView.swift in Sources */,
+				B7FA1B002E6A27D40087B825 /* ProductDetailViewModel.swift in Sources */,
 				B745C28D2E65F396002B7441 /* FlightCoordinator.swift in Sources */,
 				B76BF62B2E64BB3900D3D638 /* UserServiceProtocol.swift in Sources */,
 				B76BF6292E64B99300D3D638 /* UserRepositoryImpl.swift in Sources */,
+				B7FA1B142E6A28390087B825 /* ProductServiceProtocol.swift in Sources */,
 				B76BF60E2E64B57000D3D638 /* UserUseCase.swift in Sources */,
 				B745C2BB2E65F703002B7441 /* UserNavigationView.swift in Sources */,
+				B7FA1AFE2E6A27C90087B825 /* ProductSearchViewModel.swift in Sources */,
 				B745C2B52E65F64C002B7441 /* HomeView.swift in Sources */,
+				B7FA1B0E2E6A28190087B825 /* LiveProductService.swift in Sources */,
+				B7FA1B0C2E6A28100087B825 /* ProductRepository.swift in Sources */,
 				B76BF62D2E64BB5000D3D638 /* MockUserService.swift in Sources */,
 				B745C27B2E65F2EC002B7441 /* FlightBookView.swift in Sources */,
 				B745C2812E65F312002B7441 /* FlightSearchViewModel.swift in Sources */,
 				B745C2572E65A256002B7441 /* AppEnvironmentType.swift in Sources */,
 				B745C2B72E65F6DF002B7441 /* ForgotView.swift in Sources */,
 				B745C2A52E65F585002B7441 /* MainCoordinator.swift in Sources */,
+				B7FA1B162E6A29400087B825 /* ProductDIContainer.swift in Sources */,
+				B7FA1B082E6A27FD0087B825 /* ProductUseCase.swift in Sources */,
+				B7FA1AF02E6A27630087B825 /* ProductDetailView.swift in Sources */,
 				B745C28B2E65F33A002B7441 /* FlightFailedViewModel.swift in Sources */,
+				B7FA1B042E6A27E80087B825 /* ProductPaymentViewModel.swift in Sources */,
 				B76BF6342E64C44000D3D638 /* LiveUserService.swift in Sources */,
+				B7FA1B062E6A27EE0087B825 /* ProductSuccessViewModel.swift in Sources */,
 				B745C2CA2E660E87002B7441 /* FlightServiceLocator.swift in Sources */,
+				B7FA1AF22E6A27770087B825 /* ProductSuccessView.swift in Sources */,
 				B745C2952E65F3F2002B7441 /* FlightRepository.swift in Sources */,
 				B745C2C62E6607A5002B7441 /* HomeModuleCoordinator.swift in Sources */,
+				B7FA1B102E6A28200087B825 /* MockProductService.swift in Sources */,
 				B76BF60F2E64B57000D3D638 /* LoginView.swift in Sources */,
-				B745C2592E65C6B4002B7441 /* EnvironmentType 2.swift in Sources */,
+				B745C2592E65C6B4002B7441 /* ProductModule1.swift in Sources */,
 				B745C2932E65F3E4002B7441 /* FlightService.swift in Sources */,
 				B745C2972E65F3F7002B7441 /* FlightRepositoryImpl.swift in Sources */,
 				B76BF6102E64B57000D3D638 /* LoginViewModel.swift in Sources */,
 				B745C2792E65F2E3002B7441 /* FlightDetailView.swift in Sources */,
 				B745C29D2E65F4A4002B7441 /* NetworkClient.swift in Sources */,
 				B745C2BF2E65F720002B7441 /* SignupViewModel.swift in Sources */,
+				B7FA1B0A2E6A28050087B825 /* ProductRepositoryImpl.swift in Sources */,
 				B745C2912E65F3DA002B7441 /* LiveFlightService.swift in Sources */,
 				B76BF6112E64B57000D3D638 /* MyApp.swift in Sources */,
 				B745C2832E65F31B002B7441 /* FlightListViewModel.swift in Sources */,
 				B745C2CC2E660E90002B7441 /* UserServiceLocator.swift in Sources */,
+				B73FE5812E6776D80084F311 /* ProductModule2.swift in Sources */,
 				B745C2552E658E21002B7441 /* Coordinator.swift in Sources */,
 				B745C2992E65F3FE002B7441 /* FlightUseCase.swift in Sources */,
 				B745C2852E65F325002B7441 /* FlightDetailViewModel.swift in Sources */,
 				B76BF6132E64B57000D3D638 /* User.swift in Sources */,
+				B7FA1AF62E6A278C0087B825 /* ProductBuyView.swift in Sources */,
+				B7FA1AFC2E6A27BB0087B825 /* ProductCoordinator.swift in Sources */,
+				B7FA1B022E6A27E10087B825 /* ProductBuyViewModel.swift in Sources */,
 				B745C2BD2E65F715002B7441 /* ForgotViewModel.swift in Sources */,
 				B745C2C12E65F806002B7441 /* UserModuleCoordinator.swift in Sources */,
 				B745C2872E65F32C002B7441 /* FlightBookViewModel.swift in Sources */,
 				B76BF6142E64B57000D3D638 /* UserRepositoryProtocol.swift in Sources */,
 				B745C2732E65F2B3002B7441 /* FlightNavigationView.swift in Sources */,
+				B7FA1AF82E6A27970087B825 /* ProductSearchView.swift in Sources */,
 				B745C27F2E65F2FB002B7441 /* FlightFailedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

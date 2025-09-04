@@ -1,59 +1,94 @@
-# 🧩 Swift Modular Clean Architecture (MVVM-C)
+# 📱 iOS Modular App -- MVVM + Coordinator + Clean Architecture
 
-This is a demo iOS app showcasing **MVVM**, **Clean Architecture**, **Coordinators**, and **Service Locator** in a modular setup.  
-Each module (Home, User, Product) is fully independent and reusable in other apps.
+This project demonstrates a **senior-level iOS architecture** using:\
+- **MVVM** for presentation\
+- **Coordinator pattern** for navigation\
+- **Clean Architecture** (Data, Domain, Presentation layers)\
+- **Dependency Injection** via `AppDIContainer`\
+- **Mock vs Live environments** for easy testing and production
 
-👉 Read the full breakdown on Medium: [Building a Modular and Clean MVVM Architecture with Coordinators and Service Locator](https://medium.com/@adsurerahul96/building-a-modular-and-clean-mvvm-architecture-with-coordination-and-service-locator-5a452f1c0bc0)
+------------------------------------------------------------------------
 
----
+## 🚀 Features
 
-## ✨ Features
-- ✅ Modularized structure (Home, User, Product modules)
-- ✅ MVVM + Clean Architecture layers (Presentation, Domain, Data)
-- ✅ Coordinator-driven navigation
-- ✅ Service Locator for lightweight Dependency Injection
-- ✅ Environment switching (Mock / Live APIs)
-- ✅ Reusable modules across projects
+-   Scalable modular architecture (Product, Cart, Profile, etc.)
+-   Coordinators manage navigation
+-   Async/await for data fetching
+-   Testable with Mock services
+-   Follows **SOLID** principles
 
----
+------------------------------------------------------------------------
 
-## 🏗️ Architecture Overview
-The project follows a **Clean MVVM-C modular architecture**:
+## 📂 Project Structure
 
-- **Coordinators** handle navigation.  
-- **ServiceLocator** provides repositories, use cases, and services.  
-- **Mock and Live services** can be swapped easily for testing.  
-
-<img src="images/MVVM-CCleanArchitecture.jpg" alt="Project Screenshot" width="600">
-
-👉 Full explanation with diagrams: [Medium Article](https://medium.com/@adsurerahul96/building-a-modular-and-clean-mvvm-architecture-with-coordination-and-service-locator-5a452f1c0bc0)
-
----
+    ```
+App
+│
+├── MainCoordinator.swift      # Root navigation
+├── AppDIContainer.swift       # Dependency Injection container
+│
+├── Product
+│   ├── ProductCoordinator.swift
+│   ├── ProductUseCase.swift
+│   ├── ProductRepository.swift
+│   ├── ProductViewModels.swift
+│   └── ProductViews.swift
+│
+├── Cart
+│   ├── CartCoordinator.swift
+│   └── ...
+│
+└── Profile
+    ├── ProfileCoordinator.swift
+    └── ...
+    ```
+    ---
 
 ## 📂 Folder Structure
-<img src="images/folderStructure.jpg" alt="Project Screenshot" width="300">
+<img src="images/folderStructure.png" alt="Project Structure" width="300">
 
 ---
 
-## 🚀 Getting Started
-### Requirements
-- Xcode 14.2+
-- Swift 5.7+
-- iOS 15.0+
 
-### Run the Project
+------------------------------------------------------------------------
 
-1. Clone the repo  
-```bash
-   git clone https://github.com/dada4747/MyAppSwiftUi.git
+## 📝 Documentation
+
+We wrote a detailed Medium article explaining the architecture, module
+separation, environment setup (Mock & Live), dependency injection, and
+SOLID principles:
+
+👉 [Read the full article on Medium](https://medium.com/@adsurerahul96/building-a-scalable-ios-app-with-mvvm-coordinator-and-clean-architecture-da0be161f2e5)
+
+------------------------------------------------------------------------
+
+## 🛠 Setup
+
+``` bash
+git clone https://github.com/dada4747/MyAppSwiftUi.git
+cd MyAppSwiftUi
+open MyApp.xcodeproj
 ```
- 2. Open MyApp.xcodeproj in Xcode.
- 3. Run on simulator or device.
-  
----
+
+Switch environment (`mock` or `live`) in `AppEnvironment`.
+
+------------------------------------------------------------------------
+
+## 📌 Roadmap
+
+-   [ ] Add Cart module\
+-   [ ] Add Profile module\
+-   [ ] Add unit tests for UseCases and ViewModels
+
+------------------------------------------------------------------------
 🙌 Connect
     •    💬 Have questions? Drop an issue or comment.
-    •    📝 Full article with explanation: [Medium Article](https://medium.com/@adsurerahul96/building-a-modular-and-clean-mvvm-architecture-with-coordination-and-service-locator-5a452f1c0bc0)
+    •    📝 Full article with explanation: [Medium Article](https://medium.com/@adsurerahul96/building-a-scalable-ios-app-with-mvvm-coordinator-and-clean-architecture-da0be161f2e5)
     •    🤝 Let’s connect on [LinkedIn](https://www.linkedin.com/in/rahul-adsure-186a9b16a)
     
 ---
+
+## 📄 License
+
+MIT License
+

@@ -12,16 +12,17 @@ struct RootView: View {
     var body: some View {
         switch coordinator.selectedModule {
         case .home:
-//            HomeView(viewModel: HomeViewModel(coordinator: coordinator))
             HomeView(viewModel: HomeViewModel(
-                homeCoordinator: coordinator.homeCoordinator,
+                homeCoordinator: coordinator.makeHomeCoordinator(),
                 coordinator: coordinator
             ))
 
         case .user:
-            UserNavigationView(coordinator: UserModuleCoordinator(environment: coordinator.environment, parent: coordinator))
+            UserNavigationView(coordinator: coordinator.makeUserCoordinator() )
         case .flight:
-            FlightNavigationView(coordinator: FlightCoordinator(environment: coordinator.environment, parent: coordinator))
+            FlightNavigationView(coordinator: coordinator.makeFlightCoordinator() )
+        case .product:
+            ProductNavigationView(coordinator: coordinator.makeProductCoordinator())
         }
     }
 }

@@ -5,3 +5,5 @@
 *.xcuserstate
 xcuserdata/
 Flight/
+# Ignore Flight module
+MyApp/Modules/Flight/
