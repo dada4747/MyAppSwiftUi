@@ -5,16 +5,22 @@
 //
 
 import SwiftUI
-
-class NetworkClient {
-    private let baseURL: String
-
-    init(baseURL: String) {
-        self.baseURL = baseURL
+final class NetworkClient {
+    static let shared = NetworkClient()
+    
+    private var baseURL: String {
+        AppEnvironment.shared.baseURL
     }
 
-    func get(path: String) {
-        let url = "\(baseURL)\(path)"
-        print("Requesting: \(url)")
+    private init() {}
+
+    func request(endpoint: String) async throws -> Data {
+        let urlString = "\(baseURL)/\(endpoint)"
+        guard let url = URL(string: urlString) else {
+            throw URLError(.badURL)
+        }
+
+        let (data, _) = try await URLSession.shared.data(from: url)
+        return data
     }
 }

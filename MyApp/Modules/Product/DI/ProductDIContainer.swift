@@ -9,15 +9,12 @@ import SwiftUI
 struct ProductDIContainer {
     let environment: AppEnvironmentType
     let baseURL: String
-    
+
     func makeProductUseCase() -> ProductUseCase {
-        let service: ProductServiceProtocol
-        switch environment {
-        case .mock:
-            service = MockProductService()
-        case .live:
-            service = LiveProductService(baseURL: baseURL)
-        }
+        let service: ProductServiceProtocol = (environment == .mock)
+            ? MockProductService()
+            : LiveProductService(baseURL: baseURL)
+
         return ProductUseCase(repository: ProductRepositoryImpl(service: service))
     }
 }

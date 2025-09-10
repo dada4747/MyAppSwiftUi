@@ -5,9 +5,11 @@
 //  Created by Rahul on 05/09/25.
 //
 import SwiftUI
+import Combine
 
 
 
 protocol ProductRepository {
-    func getProducts() async throws -> [String]
+    func getProductsList()  -> AnyPublisher<[String], Error>
+    
 }

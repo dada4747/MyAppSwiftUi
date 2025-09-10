@@ -1,150 +1,126 @@
-//import SwiftUI
-//struct AppDIContainer {
+//
+//@main
+//struct MyApp: App {
+//    @StateObject var coordinator = MainCoordinator()
+////    AppEnvironment.shared = AppEnvironment(current: .mock)
+//    var body: some Scene {
+//        WindowGroup {
+//            RootView(coordinator: coordinator)
+//        }
+//    }
+//}
+//
+//
+//struct RootView: View {
+//    @ObservedObject var coordinator: MainCoordinator
+//    
+//    var body: some View {
+//        switch coordinator.selectedModule {
+//        case .home:
+//            HomeView(viewModel: HomeViewModel(
+//                homeCoordinator: coordinator.makeHomeCoordinator(),
+//                coordinator: coordinator
+//            ))
+//            
+//        case .user:
+//            UserNavigationView(coordinator: coordinator.makeUserCoordinator() )
+//        case .flight:
+//            FlightNavigationView(coordinator: coordinator.makeFlightCoordinator() )
+//        case .product:
+//            ProductNavigationView(coordinator: coordinator.makeProductCoordinator())
+//        }
+//    }
+//}
+//
+//
+//class AppCoordinator: ObservableObject {
+//    @Published var selectedModule: MainModule = .home
+//    private var environment = AppEnvironment.shared
+//
+//    enum MainModule: Hashable {
+//        case home
+//        case user
+//        case flight
+//        case product
+//    }
+//    init(environment: AppEnvironment = .shared) {
+//        self.environment = environment
+//    }
+//    private var productContainer: ProductDIContainer {
+//           ProductDIContainer(
+//               environment: environment.current,
+//               baseURL: environment.baseURL
+//           )
+//       }
+//    private var flightContainer: FlightDIContainer {
+//        FlightDIContainer(
+//            environment: environment.current,
+//            baseURL: environment.baseURL
+//        )
+//    }
+//    func goToModule(_ module: MainModule) {
+//        selectedModule = module
+//    }
+//    
+//    func goToHome() {
+//        selectedModule = .home
+//    }
+//    // Factory methods instead of keeping lazy vars
+//    func makeProductCoordinator() -> ProductCoordinator {
+//        ProductCoordinator(parent: self, container: productContainer)
+//    }
+//    
+//    func makeUserCoordinator() -> UserModuleCoordinator {
+//        UserModuleCoordinator( parent: self)
+//    }
+//    
+//    func makeFlightCoordinator() -> FlightCoordinator {
+//        FlightCoordinator(parent: self, container: flightContainer)
+//    }
+//    
+//    func makeHomeCoordinator() -> HomeModuleCoordinator {
+//        HomeModuleCoordinator()
+//    }
+//
+//}
+//struct AppEnvironment {
+//    let current: AppEnvironmentType
+//
+//    var baseURL: String {
+//        current.baseURL
+//    }
+//
+//    static let shared = AppEnvironment(current: .mock)
+//}
+//
+//enum AppEnvironmentType {
+//    case mock
+//    case live
+//
+//    var baseURL: String {
+//        switch self {
+//        case .mock: return "https://mock.api"
+//        case .live: return "https://live.api"
+//        }
+//    }
+//}
+//
+//struct ProductDIContainer {
 //    let environment: AppEnvironmentType
 //    let baseURL: String
-//    
+//
 //    func makeProductUseCase() -> ProductUseCase {
-//        let service: ProductServiceProtocol
-//        switch environment {
-//        case .mock:
-//            service = MockProductService()
-//        case .live:
-//            service = LiveProductService(baseURL: baseURL)
-//        }
+//        let service: ProductServiceProtocol = (environment == .mock)
+//            ? MockProductService()
+//            : LiveProductService(baseURL: baseURL)
+//
 //        return ProductUseCase(repository: ProductRepositoryImpl(service: service))
 //    }
 //}
-//
-////class MainCoordinator: ObservableObject {
-////    @Published var selectedModule: MainModule = .home
-////    @Published var environment = AppEnvironment()
-////    
-////    enum MainModule: Hashable {
-////        case home
-////        case user
-////        case flight
-////        case product
-////    }
-////    private var container: AppDIContainer {
-////           AppDIContainer(
-////               environment: environment.current,
-////               baseURL: environment.baseURL
-////           )
-////       }
-////    func goToModule(_ module: MainModule) {
-////        selectedModule = module
-////    }
-////    
-////    func goToHome() {
-////        selectedModule = .home
-////    }
-////    // Factory methods instead of keeping lazy vars
-////    func makeProductCoordinator() -> ProductCoordinator {
-////        ProductCoordinator(parent: self, container: container)
-////    }
-////    
-////    func makeUserCoordinator() -> UserModuleCoordinator {
-////        UserModuleCoordinator( parent: self)
-////    }
-////    
-////    func makeFlightCoordinator() -> FlightCoordinator {
-////        FlightCoordinator(parent: self)
-////    }
-////    
-////    func makeHomeCoordinator() -> HomeModuleCoordinator {
-////        HomeModuleCoordinator()
-////    }
-////
-////}
-//
-//
-//
-//
-//protocol ProductServiceProtocol {
-//    func fetchProducts() async throws -> [String]
-//}
-//
-//class MockProductService: ProductServiceProtocol {
-//    func fetchProducts() async throws -> [String] {
-//        // Simulate network delay
-//        try await Task.sleep(nanoseconds: 300_000_000)
-//        return ["Mock Product 1", "Mock Product 2", "Mock Product 3"]
-//    }
-//}
-//
-//class LiveProductService: ProductServiceProtocol {
-//    private let baseURL: String
-//    init(baseURL: String) { self.baseURL = baseURL }
-//    
-//    func fetchProducts() async throws -> [String] {
-//        // Call your real API here using baseURL asynchronously
-//        // For demonstration, simulate network delay
-//        try await Task.sleep(nanoseconds: 500_000_000)
-//        return ["Live Product 1", "Live Product 2", "Live Product 3"]
-//    }
-//}
-//
-//protocol ProductRepository {
-//    func getProducts() async throws -> [String]
-//}
-//
-//class ProductRepositoryImpl: ProductRepository {
-//    private let service: ProductServiceProtocol
-//    init(service: ProductServiceProtocol) { self.service = service }
-//    
-//    func getProducts() async throws -> [String] {
-//        try await service.fetchProducts()
-//    }
-//}
-//
-//class ProductUseCase {
-//    private let repository: ProductRepository
-//    
-//    init(repository: ProductRepository) { self.repository = repository }
-//    
-//    func execute() async throws -> [String] {
-//        try await repository.getProducts()
-//    }
-//}
-//
-////@MainActor
-//class ProductSearchViewModel: ObservableObject {
-//    @Published var products: [String] = []
-//    @Published var isLoading: Bool = false
-//    @Published var errorMessage: String? = nil
-//    
-//    private let useCase: ProductUseCase
-//    private let coordinator: ProductCoordinator
-//    
-//    init(coordinator: ProductCoordinator, useCase: ProductUseCase) {
-//        self.coordinator = coordinator
-//        self.useCase = useCase
-//    }
-//    
-//    func loadProducts() async {
-//        guard !isLoading else { return }
-//        isLoading = true
-//        errorMessage = nil
-//        do {
-//            let fetchedProducts = try await useCase.execute()
-//            products = fetchedProducts
-//        } catch {
-//            errorMessage = error.localizedDescription
-//            products = []
-//        }
-//        isLoading = false
-//    }
-//    
-//    // View only triggers navigation via coordinator
-//    func showDetail(product: String) {
-//        coordinator.navigate(to: .detail(product: product))
-//    }
-//}
-//
 //class ProductCoordinator: ObservableObject {
 //    @Published var navigationStack = NavigationPath()
 //    weak var parent: MainCoordinator?
-//    private let container: AppDIContainer
+//    private let container: ProductDIContainer
 //
 //    enum ProductRoute: Hashable {
 //        case detail(product: String)
@@ -152,59 +128,55 @@
 //        case payment
 //        case success
 //    }
-////    init(parent: MainCoordinator?) {
-////        self.parent = parent
-////    }
-//    init(parent: MainCoordinator?, container: AppDIContainer) {
+//
+//    init(parent: MainCoordinator?, container: ProductDIContainer) {
 //        self.parent = parent
 //        self.container = container
 //    }
 //
+////    func navigate(to route: Any) {
+////        guard let route = route as? ProductRoute else { return }
+////        navigationStack.append(route)
+////    }
 //    func navigate(to route: ProductRoute) {
-//        navigationStack.append(route)
-//    }
-//    
+//         navigationStack.append(route)
+//     }
 //    func goBack() {
 //        if !navigationStack.isEmpty { navigationStack.removeLast() }
 //    }
-//    func goToHome(){
+//
+//    func goToHome() {
 //        parent?.goToHome()
 //    }
+//
 //    func resetToHome() {
 //        navigationStack = NavigationPath()
 //        parent?.goToHome()
 //    }
-////    /*@MainActor*/ func makeProductSearchViewModel() -> ProductSearchViewModel {
-////        let useCase = ProductServiceLocator.shared.makeProductUseCase(
-////            baseURL: parent?.environment.baseURL ?? "",
-////            env: parent?.environment.current ?? .mock
-////        )
-////        return ProductSearchViewModel(coordinator: self, useCase: useCase)
-////    }
+//
 //    func makeProductSearchViewModel() -> ProductSearchViewModel {
-//          let useCase = container.makeProductUseCase()
-//          return ProductSearchViewModel(coordinator: self, useCase: useCase)
-//      }
+//        ProductSearchViewModel(coordinator: self, useCase: container.makeProductUseCase())
+//    }
+//
 //    func makeProductDetailViewModel(product: String) -> ProductDetailViewModel {
 //        ProductDetailViewModel(product: product, coordinator: self)
 //    }
-//    
+//
 //    func makeProductBuyViewModel(product: String) ->  ProductBuyViewModel {
 //        ProductBuyViewModel(product: product, coordinator: self)
 //    }
-//    
+//
 //    func makeProductPaymentViewModel() -> ProductPaymentViewModel {
 //        ProductPaymentViewModel(coordinator: self)
 //    }
-//    
+//
 //    func makeProductSuccessViewModel() -> ProductSuccessViewModel {
 //        ProductSuccessViewModel(coordinator: self)
 //    }
 //}
-//
-//
 //struct ProductNavigationView: View {
 //    @ObservedObject var coordinator: ProductCoordinator
+//
 //    var body: some View {
 //        NavigationStack(path: $coordinator.navigationStack) {
 //            ProductSearchView(viewModel: coordinator.makeProductSearchViewModel())
@@ -223,172 +195,152 @@
 //        }
 //    }
 //}
-//
-//
-//struct ProductSearchView: View {
-//    @StateObject var viewModel: ProductSearchViewModel
+//class LiveProductService: ProductServiceProtocol {
+// 
+//    private let baseURL: String
+//    init(baseURL: String) { self.baseURL = baseURL }
 //    
+//    func fetchProducts() -> AnyPublisher<[String], Error> {
+//        // Call your real API here using baseURL asynchronously
+//        // For demonstration, simulate network delay
+//        return Just(["Live Product 1", "Live Product 2", "Live Product 3"])
+//            .delay(for: .seconds(2), scheduler: RunLoop.main)
+////            .mapError({ error in
+////                return AppError.network($0)
+////            })
+//            .setFailureType(to: Error.self)
+//            .eraseToAnyPublisher()
+//    }
+//}
+//enum AppError: Error {
+//    case network(URLError)
+//    case unknown
+//}
+//
+//
+//struct FlightDIContainer {
+//    let environment: AppEnvironmentType
+//    let baseURL: String
+//
+//    func makeFlightUseCase() -> FlightUseCase {
+//        let service: FlightServiceProtocol
+//        switch environment {
+//        case .mock:
+//            service = MockFlightService()
+//        case .live:
+//            service = LiveFlightService(/*baseURL: baseURL*/)
+//        }
+//        return FlightUseCase(repository: FlightRepositoryImpl(service: service))
+//    }
+//}
+//
+//class FlightCoordinator: ObservableObject {
+//    @Published var navigationStack = NavigationPath()
+//    weak var parent: MainCoordinator?
+//    private let container: FlightDIContainer
+//    
+//    enum FlightRoute: Hashable {
+//        case search
+//        case list(searchData: [String])
+//        case detail(selectedFlight: String)
+//        case book(selectedFlight: String)
+//        case success
+//        case failed
+//    }
+//    
+//    
+//    init(parent: MainCoordinator?, container: FlightDIContainer) {
+//        self.parent = parent
+//        self.container = container
+//    }
+//    
+//    func navigate(to route: FlightRoute) {
+//        navigationStack.append(route)
+//    }
+//    
+//    func goBack() {
+//        if !navigationStack.isEmpty { navigationStack.removeLast() }
+//    }
+//    
+//    func goToHome() {
+//        parent?.goToHome()
+//    }
+//    func resetToHome() {
+//        navigationStack = NavigationPath()
+//        parent?.goToHome()
+//    }
+//    
+//    func makeFlightSearchViewModel() -> FlightSearchViewModel {
+//        let useCase = container.makeFlightUseCase()
+//        return FlightSearchViewModel(coordinator: self, useCase: useCase)
+//    }
+//    
+//    func makeFlightListViewModel(searchData: [String]) -> FlightListViewModel {
+//        FlightListViewModel(coordinator: self, searchResults: searchData)
+//    }
+//}
+//struct FlightNavigationView: View {
+//    @StateObject var coordinator: FlightCoordinator
+//
 //    var body: some View {
-//        VStack(spacing: 20) {
-//            Text("Product Search")
-//            
-//            if viewModel.isLoading {
-//                ProgressView()
-//            } else if let error = viewModel.errorMessage {
-//                Text("Error: \(error)")
-//                    .foregroundColor(.red)
-//            } else {
-//                List(viewModel.products, id: \.self) { product in
-//                    Button(product) {
-//                        viewModel.showDetail(product: product)
+//        NavigationStack(path: $coordinator.navigationStack) {
+//            FlightSearchView(viewModel: coordinator.makeFlightSearchViewModel())                .navigationDestination(for: FlightCoordinator.FlightRoute.self) { route in
+//                    switch route {
+//                    case .search:
+//                        FlightSearchView(viewModel: coordinator.makeFlightSearchViewModel())
+//                    case .list(let searchData):
+//                        
+//                        FlightListView(viewModel: coordinator.makeFlightListViewModel(searchData: searchData))
+//                    case .detail(let selectedFlight):
+//                        FlightDetailView(viewModel: FlightDetailViewModel(coordinator: coordinator, selectedFlight: selectedFlight))
+//                    case .book(let selectedFlight):
+//                        FlightBookView(viewModel: FlightBookViewModel(coordinator: coordinator, selectedFlight: selectedFlight))
+//                    case .success:
+//                        FlightSuccessView(viewModel: FlightSuccessViewModel(coordinator: coordinator))
+//                    case .failed:
+//                        FlightFailedView(viewModel: FlightFailedViewModel(coordinator: coordinator))
 //                    }
 //                }
-//            }
-//        }
-//        .task {
-//            await viewModel.loadProducts()
 //        }
 //    }
 //}
+///*
+//                    [App Start]
+//                        ↓
+//                     [MyApp]
+//                        ↓
+//                    [RootView]
+//                        ↓
+//                  [MainCoordinator] ─ AppEnvironment (shared .mock / .live)
+//                        ↓
+//              ProductNavigationView
+//                        ↓
+//                ProductCoordinator
+//                        └── ProductDIContainer → ProductUseCase → ProductRepository → ProductService (Mock / Live)
 //
+// 
+// 
+//HomeViewNavigation
+//   ↓
+//HomeModuleCoordinator
+//   ↓
+//(HomeDIContainer to be added later)
+// 
+// 
+//├── UserNavigationView ← UserModuleCoordinator → (UserDIContainer to be added later)
+//├── FlightNavigationView ← FlightCoordinator
+//│        └── FlightDIContainer → FlightUseCase → FlightRepository → FlightService (Mock / Live)
+//│
+//└── ProductNavigationView ← ProductCoordinator
+//      └── ProductDIContainer → ProductUseCase → ProductRepository → ProductService (Mock / Live)
 //
-//struct ProductBuyView: View {
-//    @StateObject var viewModel: ProductBuyViewModel
-//    
-//    var body: some View {
-//        VStack(spacing: 20) {
-//            Text("Buy Product: \(viewModel.product)")
-//                .font(.title)
-//            
-//            HStack(spacing: 40) {
-//                Button("Back") {
-//                    viewModel.goBack()
-//                }
-//                Button("Next → Payment") {
-//                    viewModel.goToPayment()
-//                }
-//            }
-//        }
-//        .padding()
-//    }
-//}
+//[Flow of DI]
+//- AppEnvironment defines environment (mock/live + baseURL)
+//- DIContainers (ProductDIContainer, FlightDIContainer) take AppEnvironment
+//- DIContainer builds UseCase and Service layer injection
+//- Coordinator uses DIContainer to create ViewModels
+//- ViewModels used by Views
 //
-//struct ProductPaymentView: View {
-//    @StateObject var viewModel: ProductPaymentViewModel
-//    
-//    var body: some View {
-//        VStack(spacing: 20) {
-//            Text("Payment Screen")
-//                .font(.title)
-//            
-//            HStack(spacing: 40) {
-//                Button("Back") {
-//                    viewModel.goBack()
-//                }
-//                Button("Next → Success") {
-//                    viewModel.goToSuccess()
-//                }
-//            }
-//        }
-//        .padding()
-//    }
-//}
-//
-//struct ProductSuccessView: View {
-//    @StateObject var viewModel: ProductSuccessViewModel
-//    
-//    var body: some View {
-//        VStack(spacing: 20) {
-//            Text("Purchase Successful!")
-//                .font(.largeTitle)
-//                .foregroundColor(.green)
-//            
-//            Button("Back to Home") {
-//                viewModel.backToHome() // Switch module back to Home
-//            }
-//        }
-//        .padding()
-//    }
-//}
-//
-//class ProductDetailViewModel: ObservableObject {
-//    private let coordinator: ProductCoordinator
-//    let product: String
-//    
-//    init(product: String, coordinator: ProductCoordinator) {
-//        self.coordinator = coordinator
-//        self.product = product
-//    }
-//    
-//    func goBack() {
-//        coordinator.goBack()
-//    }
-//    
-//    func goToBuy() {
-//        coordinator.navigate(to: .buy(product: product))
-//    }
-//}
-//
-//class ProductBuyViewModel: ObservableObject {
-//    private let coordinator: ProductCoordinator
-//    let product: String
-//    
-//    init(product: String, coordinator: ProductCoordinator) {
-//        self.coordinator = coordinator
-//        self.product = product
-//    }
-//    
-//    func goBack() {
-//        coordinator.goBack()
-//    }
-//    
-//    func goToPayment() {
-//        coordinator.navigate(to: .payment)
-//    }
-//}
-//
-//class ProductPaymentViewModel: ObservableObject {
-//    private let coordinator: ProductCoordinator
-//    
-//    init(coordinator: ProductCoordinator) {
-//        self.coordinator = coordinator
-//    }
-//    
-//    func goBack() {
-//        coordinator.goBack()
-//    }
-//    
-//    func goToSuccess() {
-//        coordinator.navigate(to: .success)
-//    }
-//    
-//}
-//
-//class ProductSuccessViewModel: ObservableObject {
-//    private let coordinator: ProductCoordinator
-//    
-//    init(coordinator: ProductCoordinator) {
-//        self.coordinator = coordinator
-//    }
-//    
-//    func backToHome() {
-//        coordinator.resetToHome()
-//    }
-//}
-//
-//struct ProductDetailView: View {
-//    @StateObject var viewModel: ProductDetailViewModel
-//    
-//    var body: some View {
-//        VStack(spacing: 20) {
-//            Text("Product Detail: \(viewModel.product)")
-//                .font(.title)
-//            
-//            HStack(spacing: 40) {
-//                Button("Back") { viewModel.goBack() }
-//                Button("Next → Buy") { viewModel.goToBuy() }
-//            }
-//        }
-//        .padding()
-//    }
-//}
+//[Services]
+//- ProductServiceProtocol (MockProductService / LiveProductService)
+//- FlightServiceProtocol (MockFlightService / LiveFlightService)*/

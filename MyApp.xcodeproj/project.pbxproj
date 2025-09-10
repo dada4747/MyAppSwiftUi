@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B7264AC52E70983A0087F0CC /* FlightDetailsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7264AC42E70983A0087F0CC /* FlightDetailsUseCase.swift */; };
+		B7264AC72E70984B0087F0CC /* FlightBookUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7264AC62E70984B0087F0CC /* FlightBookUseCase.swift */; };
+		B7264AC92E7098650087F0CC /* FlightPrebookUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7264AC82E7098650087F0CC /* FlightPrebookUseCase.swift */; };
 		B73FE5812E6776D80084F311 /* ProductModule2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B73FE5802E6776D80084F311 /* ProductModule2.swift */; };
-		B745C2552E658E21002B7441 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2542E658E21002B7441 /* Coordinator.swift */; };
+		B745C2552E658E21002B7441 /* architecture.drawio in Sources */ = {isa = PBXBuildFile; fileRef = B745C2542E658E21002B7441 /* architecture.drawio */; };
 		B745C2572E65A256002B7441 /* AppEnvironmentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2562E65A256002B7441 /* AppEnvironmentType.swift */; };
 		B745C2592E65C6B4002B7441 /* ProductModule1.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2582E65C6B4002B7441 /* ProductModule1.swift */; };
 		B745C2732E65F2B3002B7441 /* FlightNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2722E65F2B3002B7441 /* FlightNavigationView.swift */; };
@@ -27,14 +30,14 @@
 		B745C28D2E65F396002B7441 /* FlightCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C28C2E65F396002B7441 /* FlightCoordinator.swift */; };
 		B745C28F2E65F3D3002B7441 /* MockFlightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C28E2E65F3D3002B7441 /* MockFlightService.swift */; };
 		B745C2912E65F3DA002B7441 /* LiveFlightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2902E65F3DA002B7441 /* LiveFlightService.swift */; };
-		B745C2932E65F3E4002B7441 /* FlightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2922E65F3E4002B7441 /* FlightService.swift */; };
+		B745C2932E65F3E4002B7441 /* FlightServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2922E65F3E4002B7441 /* FlightServiceProtocol.swift */; };
 		B745C2952E65F3F2002B7441 /* FlightRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2942E65F3F2002B7441 /* FlightRepository.swift */; };
 		B745C2972E65F3F7002B7441 /* FlightRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2962E65F3F7002B7441 /* FlightRepositoryImpl.swift */; };
 		B745C2992E65F3FE002B7441 /* FlightUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2982E65F3FE002B7441 /* FlightUseCase.swift */; };
 		B745C29B2E65F46A002B7441 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C29A2E65F46A002B7441 /* RootView.swift */; };
 		B745C29D2E65F4A4002B7441 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C29C2E65F4A4002B7441 /* NetworkClient.swift */; };
 		B745C2A02E65F4E6002B7441 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C29F2E65F4E6002B7441 /* AppEnvironment.swift */; };
-		B745C2A52E65F585002B7441 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2A42E65F585002B7441 /* MainCoordinator.swift */; };
+		B745C2A52E65F585002B7441 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2A42E65F585002B7441 /* AppCoordinator.swift */; };
 		B745C2B32E65F643002B7441 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2B22E65F643002B7441 /* HomeViewModel.swift */; };
 		B745C2B52E65F64C002B7441 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2B42E65F64C002B7441 /* HomeView.swift */; };
 		B745C2B72E65F6DF002B7441 /* ForgotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2B62E65F6DF002B7441 /* ForgotView.swift */; };
@@ -44,7 +47,7 @@
 		B745C2BF2E65F720002B7441 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2BE2E65F720002B7441 /* SignupViewModel.swift */; };
 		B745C2C12E65F806002B7441 /* UserModuleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2C02E65F806002B7441 /* UserModuleCoordinator.swift */; };
 		B745C2C62E6607A5002B7441 /* HomeModuleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2C52E6607A5002B7441 /* HomeModuleCoordinator.swift */; };
-		B745C2CA2E660E87002B7441 /* FlightServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2C92E660E87002B7441 /* FlightServiceLocator.swift */; };
+		B745C2CA2E660E87002B7441 /* FlightDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2C92E660E87002B7441 /* FlightDIContainer.swift */; };
 		B745C2CC2E660E90002B7441 /* UserServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B745C2CB2E660E90002B7441 /* UserServiceLocator.swift */; };
 		B76BF60A2E64B57000D3D638 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B76BF5FD2E64B57000D3D638 /* Preview Assets.xcassets */; };
 		B76BF60B2E64B57000D3D638 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B76BF5FF2E64B57000D3D638 /* Assets.xcassets */; };
@@ -93,8 +96,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B7264AC42E70983A0087F0CC /* FlightDetailsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDetailsUseCase.swift; sourceTree = "<group>"; };
+		B7264AC62E70984B0087F0CC /* FlightBookUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightBookUseCase.swift; sourceTree = "<group>"; };
+		B7264AC82E7098650087F0CC /* FlightPrebookUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightPrebookUseCase.swift; sourceTree = "<group>"; };
 		B73FE5802E6776D80084F311 /* ProductModule2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModule2.swift; sourceTree = "<group>"; };
-		B745C2542E658E21002B7441 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		B745C2542E658E21002B7441 /* architecture.drawio */ = {isa = PBXFileReference; lastKnownFileType = text; path = architecture.drawio; sourceTree = "<group>"; };
 		B745C2562E65A256002B7441 /* AppEnvironmentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironmentType.swift; sourceTree = "<group>"; };
 		B745C2582E65C6B4002B7441 /* ProductModule1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductModule1.swift; sourceTree = "<group>"; };
 		B745C2722E65F2B3002B7441 /* FlightNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightNavigationView.swift; sourceTree = "<group>"; };
@@ -113,14 +119,14 @@
 		B745C28C2E65F396002B7441 /* FlightCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightCoordinator.swift; sourceTree = "<group>"; };
 		B745C28E2E65F3D3002B7441 /* MockFlightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockFlightService.swift; sourceTree = "<group>"; };
 		B745C2902E65F3DA002B7441 /* LiveFlightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveFlightService.swift; sourceTree = "<group>"; };
-		B745C2922E65F3E4002B7441 /* FlightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightService.swift; sourceTree = "<group>"; };
+		B745C2922E65F3E4002B7441 /* FlightServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightServiceProtocol.swift; sourceTree = "<group>"; };
 		B745C2942E65F3F2002B7441 /* FlightRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightRepository.swift; sourceTree = "<group>"; };
 		B745C2962E65F3F7002B7441 /* FlightRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightRepositoryImpl.swift; sourceTree = "<group>"; };
 		B745C2982E65F3FE002B7441 /* FlightUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightUseCase.swift; sourceTree = "<group>"; };
 		B745C29A2E65F46A002B7441 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		B745C29C2E65F4A4002B7441 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
 		B745C29F2E65F4E6002B7441 /* AppEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironment.swift; sourceTree = "<group>"; };
-		B745C2A42E65F585002B7441 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		B745C2A42E65F585002B7441 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		B745C2B22E65F643002B7441 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		B745C2B42E65F64C002B7441 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		B745C2B62E65F6DF002B7441 /* ForgotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotView.swift; sourceTree = "<group>"; };
@@ -130,7 +136,7 @@
 		B745C2BE2E65F720002B7441 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		B745C2C02E65F806002B7441 /* UserModuleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModuleCoordinator.swift; sourceTree = "<group>"; };
 		B745C2C52E6607A5002B7441 /* HomeModuleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModuleCoordinator.swift; sourceTree = "<group>"; };
-		B745C2C92E660E87002B7441 /* FlightServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightServiceLocator.swift; sourceTree = "<group>"; };
+		B745C2C92E660E87002B7441 /* FlightDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightDIContainer.swift; sourceTree = "<group>"; };
 		B745C2CB2E660E90002B7441 /* UserServiceLocator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserServiceLocator.swift; sourceTree = "<group>"; };
 		B76BF5DE2E64B44200D3D638 /* MyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B76BF5FD2E64B57000D3D638 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -335,6 +341,9 @@
 			isa = PBXGroup;
 			children = (
 				B745C2982E65F3FE002B7441 /* FlightUseCase.swift */,
+				B7264AC42E70983A0087F0CC /* FlightDetailsUseCase.swift */,
+				B7264AC62E70984B0087F0CC /* FlightBookUseCase.swift */,
+				B7264AC82E7098650087F0CC /* FlightPrebookUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -375,7 +384,7 @@
 		B745C26F2E65F078002B7441 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				B745C2922E65F3E4002B7441 /* FlightService.swift */,
+				B745C2922E65F3E4002B7441 /* FlightServiceProtocol.swift */,
 				B745C28E2E65F3D3002B7441 /* MockFlightService.swift */,
 				B745C2902E65F3DA002B7441 /* LiveFlightService.swift */,
 			);
@@ -411,7 +420,7 @@
 		B745C2A32E65F578002B7441 /* Coordination */ = {
 			isa = PBXGroup;
 			children = (
-				B745C2A42E65F585002B7441 /* MainCoordinator.swift */,
+				B745C2A42E65F585002B7441 /* AppCoordinator.swift */,
 			);
 			path = Coordination;
 			sourceTree = "<group>";
@@ -523,7 +532,7 @@
 		B745C2CD2E66135A002B7441 /* DI */ = {
 			isa = PBXGroup;
 			children = (
-				B745C2C92E660E87002B7441 /* FlightServiceLocator.swift */,
+				B745C2C92E660E87002B7441 /* FlightDIContainer.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -625,7 +634,7 @@
 			children = (
 				B745C2582E65C6B4002B7441 /* ProductModule1.swift */,
 				B73FE5802E6776D80084F311 /* ProductModule2.swift */,
-				B745C2542E658E21002B7441 /* Coordinator.swift */,
+				B745C2542E658E21002B7441 /* architecture.drawio */,
 			);
 			path = "Common UI";
 			sourceTree = "<group>";
@@ -881,6 +890,7 @@
 				B745C28F2E65F3D3002B7441 /* MockFlightService.swift in Sources */,
 				B745C2892E65F335002B7441 /* FlightSuccessViewModel.swift in Sources */,
 				B745C27D2E65F2F3002B7441 /* FlightSuccessView.swift in Sources */,
+				B7264AC92E7098650087F0CC /* FlightPrebookUseCase.swift in Sources */,
 				B745C2B32E65F643002B7441 /* HomeViewModel.swift in Sources */,
 				B745C2B92E65F6E4002B7441 /* SignupView.swift in Sources */,
 				B7FA1AF42E6A27800087B825 /* ProductPaymentView.swift in Sources */,
@@ -905,24 +915,26 @@
 				B745C2812E65F312002B7441 /* FlightSearchViewModel.swift in Sources */,
 				B745C2572E65A256002B7441 /* AppEnvironmentType.swift in Sources */,
 				B745C2B72E65F6DF002B7441 /* ForgotView.swift in Sources */,
-				B745C2A52E65F585002B7441 /* MainCoordinator.swift in Sources */,
+				B745C2A52E65F585002B7441 /* AppCoordinator.swift in Sources */,
 				B7FA1B162E6A29400087B825 /* ProductDIContainer.swift in Sources */,
+				B7264AC52E70983A0087F0CC /* FlightDetailsUseCase.swift in Sources */,
 				B7FA1B082E6A27FD0087B825 /* ProductUseCase.swift in Sources */,
 				B7FA1AF02E6A27630087B825 /* ProductDetailView.swift in Sources */,
 				B745C28B2E65F33A002B7441 /* FlightFailedViewModel.swift in Sources */,
 				B7FA1B042E6A27E80087B825 /* ProductPaymentViewModel.swift in Sources */,
 				B76BF6342E64C44000D3D638 /* LiveUserService.swift in Sources */,
 				B7FA1B062E6A27EE0087B825 /* ProductSuccessViewModel.swift in Sources */,
-				B745C2CA2E660E87002B7441 /* FlightServiceLocator.swift in Sources */,
+				B745C2CA2E660E87002B7441 /* FlightDIContainer.swift in Sources */,
 				B7FA1AF22E6A27770087B825 /* ProductSuccessView.swift in Sources */,
 				B745C2952E65F3F2002B7441 /* FlightRepository.swift in Sources */,
 				B745C2C62E6607A5002B7441 /* HomeModuleCoordinator.swift in Sources */,
 				B7FA1B102E6A28200087B825 /* MockProductService.swift in Sources */,
 				B76BF60F2E64B57000D3D638 /* LoginView.swift in Sources */,
 				B745C2592E65C6B4002B7441 /* ProductModule1.swift in Sources */,
-				B745C2932E65F3E4002B7441 /* FlightService.swift in Sources */,
+				B745C2932E65F3E4002B7441 /* FlightServiceProtocol.swift in Sources */,
 				B745C2972E65F3F7002B7441 /* FlightRepositoryImpl.swift in Sources */,
 				B76BF6102E64B57000D3D638 /* LoginViewModel.swift in Sources */,
+				B7264AC72E70984B0087F0CC /* FlightBookUseCase.swift in Sources */,
 				B745C2792E65F2E3002B7441 /* FlightDetailView.swift in Sources */,
 				B745C29D2E65F4A4002B7441 /* NetworkClient.swift in Sources */,
 				B745C2BF2E65F720002B7441 /* SignupViewModel.swift in Sources */,
@@ -932,7 +944,7 @@
 				B745C2832E65F31B002B7441 /* FlightListViewModel.swift in Sources */,
 				B745C2CC2E660E90002B7441 /* UserServiceLocator.swift in Sources */,
 				B73FE5812E6776D80084F311 /* ProductModule2.swift in Sources */,
-				B745C2552E658E21002B7441 /* Coordinator.swift in Sources */,
+				B745C2552E658E21002B7441 /* architecture.drawio in Sources */,
 				B745C2992E65F3FE002B7441 /* FlightUseCase.swift in Sources */,
 				B745C2852E65F325002B7441 /* FlightDetailViewModel.swift in Sources */,
 				B76BF6132E64B57000D3D638 /* User.swift in Sources */,

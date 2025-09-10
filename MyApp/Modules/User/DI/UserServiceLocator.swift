@@ -21,7 +21,7 @@ class UserServiceLocator {
     }
     
     func makeLoginView(coordinator: UserModuleCoordinator) -> some View {
-        let useCase = makeUserUseCase(env: coordinator.parent?.environment.current ?? .mock)
+        let useCase = makeUserUseCase(env: /*coordinator.parent?.environment.current*/.mock ?? .mock)
         let viewModel = LoginViewModel(coordinator: coordinator, useCase: useCase)
         return LoginView(viewModel: viewModel)
     }
@@ -37,7 +37,7 @@ class UserServiceLocator {
         func makeSignupView(coordinator: UserModuleCoordinator) -> some View {
             let useCase = makeUserUseCase(
 //                baseURL: coordinator.environment.baseURL,
-                env: coordinator.parent?.environment.current ?? .mock
+                env: /*coordinator.parent?.environment.current ??*/ .mock
             )
             let vm = SignupViewModel(coordinator: coordinator, useCase: useCase)
             return SignupView(viewModel: vm)
@@ -46,7 +46,7 @@ class UserServiceLocator {
         func makeForgotView(coordinator: UserModuleCoordinator) -> some View {
             let useCase = makeUserUseCase(
 //                baseURL: coordinator.environment.baseURL,
-                env: coordinator.parent?.environment.current ?? .mock
+                env: /*coordinator.parent?.environment.current ??*/ .mock
             )
             let vm = ForgotViewModel(coordinator: coordinator, useCase: useCase)
             return ForgotView(viewModel: vm)

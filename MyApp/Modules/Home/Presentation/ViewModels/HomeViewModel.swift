@@ -9,9 +9,9 @@ import SwiftUI
 class HomeViewModel: ObservableObject {
 //    @Published var coordinator: MainCoordinator
     @Published var homeCoordinator: HomeModuleCoordinator
-    var mainCoordinator: MainCoordinator
+    var mainCoordinator: AppCoordinator
 
-    init(homeCoordinator: HomeModuleCoordinator, coordinator: MainCoordinator) {
+    init(homeCoordinator: HomeModuleCoordinator, coordinator: AppCoordinator) {
         self.homeCoordinator = homeCoordinator
         self.mainCoordinator = coordinator
     }

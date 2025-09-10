@@ -6,9 +6,9 @@
 //
 import SwiftUI
 
-
 struct ProductNavigationView: View {
     @ObservedObject var coordinator: ProductCoordinator
+
     var body: some View {
         NavigationStack(path: $coordinator.navigationStack) {
             ProductSearchView(viewModel: coordinator.makeProductSearchViewModel())
@@ -27,3 +27,4 @@ struct ProductNavigationView: View {
         }
     }
 }
+

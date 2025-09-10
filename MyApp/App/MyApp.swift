@@ -9,11 +9,11 @@ import SwiftUI
 
 @main
 struct MyApp: App {
-        @StateObject var coordinator = MainCoordinator()
-    
-        var body: some Scene {
-            WindowGroup {
-                RootView(coordinator: coordinator)
-            }
+    @StateObject var coordinator = AppCoordinator()
+//    AppEnvironment.shared = AppEnvironment(current: .mock)
+    var body: some Scene {
+        WindowGroup {
+            RootView(coordinator: coordinator)
         }
+    }
 }

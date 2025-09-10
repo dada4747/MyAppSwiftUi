@@ -9,7 +9,7 @@ import SwiftUI
 
 class UserModuleCoordinator: ObservableObject {
 //    @ObservedObject var environment: AppEnvironment
-    weak var parent: MainCoordinator?
+    weak var parent: AppCoordinator?
     
     enum UserRoute: Hashable {
         case login
@@ -19,7 +19,7 @@ class UserModuleCoordinator: ObservableObject {
     
     @Published var path = NavigationPath()
     
-    init(/*environment: AppEnvironment, */parent: MainCoordinator?) {
+    init(/*environment: AppEnvironment, */parent: AppCoordinator?) {
 //        self.environment = environment
         self.parent = parent
     }

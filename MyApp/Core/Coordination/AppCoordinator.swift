@@ -6,22 +6,31 @@
 
 import SwiftUI
 
-class MainCoordinator: ObservableObject {
+class AppCoordinator: ObservableObject {
     @Published var selectedModule: MainModule = .home
-    @Published var environment = AppEnvironment()
-    
+    private var environment = AppEnvironment.shared
+
     enum MainModule: Hashable {
         case home
         case user
         case flight
         case product
     }
-    private var container: ProductDIContainer {
+    init(environment: AppEnvironment = .shared) {
+        self.environment = environment
+    }
+    private var productContainer: ProductDIContainer {
            ProductDIContainer(
                environment: environment.current,
                baseURL: environment.baseURL
            )
        }
+    private var flightContainer: FlightDIContainer {
+        FlightDIContainer(
+            environment: environment.current,
+            baseURL: environment.baseURL
+        )
+    }
     func goToModule(_ module: MainModule) {
         selectedModule = module
     }
@@ -31,7 +40,7 @@ class MainCoordinator: ObservableObject {
     }
     // Factory methods instead of keeping lazy vars
     func makeProductCoordinator() -> ProductCoordinator {
-        ProductCoordinator(parent: self, container: container)
+        ProductCoordinator(parent: self, container: productContainer)
     }
     
     func makeUserCoordinator() -> UserModuleCoordinator {
@@ -39,7 +48,7 @@ class MainCoordinator: ObservableObject {
     }
     
     func makeFlightCoordinator() -> FlightCoordinator {
-        FlightCoordinator(parent: self)
+        FlightCoordinator(parent: self, container: flightContainer)
     }
     
     func makeHomeCoordinator() -> HomeModuleCoordinator {

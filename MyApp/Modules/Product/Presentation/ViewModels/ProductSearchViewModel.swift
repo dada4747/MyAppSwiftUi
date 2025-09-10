@@ -5,6 +5,7 @@
 //  Created by Rahul on 05/09/25.
 //
 import SwiftUI
+import Combine
 
 
 //@MainActor
@@ -12,7 +13,8 @@ class ProductSearchViewModel: ObservableObject {
     @Published var products: [String] = []
     @Published var isLoading: Bool = false
     @Published var errorMessage: String? = nil
-    
+    private var cancellables = Set<AnyCancellable>()
+
     private let useCase: ProductUseCase
     private let coordinator: ProductCoordinator
     
@@ -21,18 +23,24 @@ class ProductSearchViewModel: ObservableObject {
         self.useCase = useCase
     }
     
-    func loadProducts() async {
+    func loadProducts()  {
         guard !isLoading else { return }
         isLoading = true
         errorMessage = nil
-        do {
-            let fetchedProducts = try await useCase.execute()
-            products = fetchedProducts
-        } catch {
-            errorMessage = error.localizedDescription
-            products = []
-        }
-        isLoading = false
+        
+        useCase.execute()
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] completion in
+                self?.isLoading = false
+                switch completion {
+                case.failure(let error): self?.errorMessage = error.localizedDescription
+                case .finished:
+                    break
+                }
+            } receiveValue: {  [weak self] products in
+                self?.products = products
+            }.store(in: &cancellables)
+        
     }
     
     // View only triggers navigation via coordinator

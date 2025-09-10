@@ -7,7 +7,7 @@
 import SwiftUI
 
 struct RootView: View {
-    @ObservedObject var coordinator: MainCoordinator
+    @ObservedObject var coordinator: AppCoordinator
     
     var body: some View {
         switch coordinator.selectedModule {
@@ -16,7 +16,7 @@ struct RootView: View {
                 homeCoordinator: coordinator.makeHomeCoordinator(),
                 coordinator: coordinator
             ))
-
+            
         case .user:
             UserNavigationView(coordinator: coordinator.makeUserCoordinator() )
         case .flight:

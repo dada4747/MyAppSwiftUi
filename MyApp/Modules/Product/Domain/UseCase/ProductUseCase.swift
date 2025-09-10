@@ -5,6 +5,7 @@
 //  Created by Rahul on 05/09/25.
 //
 import SwiftUI
+import Combine
 
 
 
@@ -13,7 +14,7 @@ class ProductUseCase {
     
     init(repository: ProductRepository) { self.repository = repository }
     
-    func execute() async throws -> [String] {
-        try await repository.getProducts()
+    func execute() -> AnyPublisher<[String], any Error> {
+        repository.getProductsList()
     }
 }
